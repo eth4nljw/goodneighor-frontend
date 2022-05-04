@@ -1,0 +1,4 @@
+<view>Items index page</view>
+<view wx:for="{{items}}" wx:for-item="item" data-id="{{id}}">
+{{item.id}} - {{item.category}}
+</view>

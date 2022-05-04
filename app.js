@@ -32,7 +32,8 @@ App({
     userInfo: null,
     baseUrl: "http://localhost:3000/api/v1",
     header: null,
-    user: null
+    user: null,
+    items: null
   }
 })
 

@@ -28,6 +28,13 @@
                     "name": "Items index",
                     "pathName": "pages/itemsIndex/itemsIndex",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "Items Show",
+                    "pathName": "pages/itemsShow/itemsShow",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

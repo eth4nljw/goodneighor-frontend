@@ -21,3 +21,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<view>
+<button bindtap="goToItemsIndex">items index</button>
+</view>

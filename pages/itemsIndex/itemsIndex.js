@@ -4,6 +4,32 @@ let app = getApp()
 
 Page({
 
+  getItems: function() {
+    const page = this
+    wx.request({
+      url: `${app.globalData.baseUrl}/items`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+      console.log("res:", res)
+      const items = res.data;
+      page.setData({
+        items: items,
+      });
+    }
+  })
+  },
+  
+    /** 
+    * Bindtap for go to the item show
+    */
+   goToItemShow: function(e) {
+        const itemId = e.currentTarget.dataset.id
+        console.log("itemId:", itemId)
+        wx.navigateTo({
+          url: `/pages/itemsShow/itemsShow?id=${itemId}`
+        })
+   },
     /**
      * Page initial data
      */
@@ -15,19 +41,12 @@ Page({
      * Lifecycle function--Called when page load
      */
     onLoad: function (options) {
-        let page = this;
-        wx.request({
-            url: `${app.globalData.baseUrl}/items`,
-            method: 'GET',
-            header: app.globalData.header,
-            success(res) {
-            const items = res.data;
-            console.log(items)
-            page.setData({
-                items: items,
-               });
-            }
-          })
+      let page = this;
+      if (!app.globalData.header) {
+        wx.event.on("loginsuccess", page, page.getItems)
+      } else {
+        page.getItems()
+      }           
     },
 
     /**

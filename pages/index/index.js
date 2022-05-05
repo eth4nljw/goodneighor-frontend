@@ -3,6 +3,17 @@
 const app = getApp()
 
 Page({
+
+ /** 
+    * Bindtap for go to the item show
+    */
+   goToItemsIndex: function(e) {
+    wx.navigateTo({
+      url: `/pages/itemsIndex/itemsIndex`
+    })
+},
+
+
   data: {
     motto: 'Hello World',
     userInfo: {},

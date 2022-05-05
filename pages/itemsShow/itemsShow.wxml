@@ -1,2 +1,7 @@
-<!--pages/itemsShow/itemsShow.wxml-->
-<text>pages/itemsShow/itemsShow.wxml</text>
+<!-- TODO: change the below with show one item only code -->
+<view>Item Show page</view>
+<view>
+<image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
+<text>{{item.category}} - {{item.name}}</text>
+</view>
+<!-- end of todo -->

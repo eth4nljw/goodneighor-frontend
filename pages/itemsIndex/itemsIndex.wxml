@@ -1,4 +1,5 @@
 <view>Items index page</view>
-<view wx:for="{{items}}" wx:for-item="item" data-id="{{id}}">
-{{item.id}} - {{item.category}}
+<view wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
+<!-- <image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image> -->
+<text>{{item.id}} - {{item.name}}</text>
 </view>

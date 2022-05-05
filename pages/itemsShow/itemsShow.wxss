@@ -1,5 +1,11 @@
 /* pages/itemsShow/itemsShow.wxss */
 .item-image-large{
-    height: 700rpx;
-    width: 750rpx;
+    /* height: 700rpx;
+    width: 750rpx; */
 }
+
+.Photo{
+    margin-top: -20rpx;
+    float: left;
+}
+

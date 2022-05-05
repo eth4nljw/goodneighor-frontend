@@ -10,11 +10,33 @@ Page({
             method: 'GET',
             header: app.globalData.header,
             success(res) {
-                console.log("res:", res)
-                const item = res.data;
+                const item = res.data.item;
+                const usernickname = res.data.usernickname;
                 page.setData({
                     item: item,
+                    usernickname: usernickname
                 });
+                console.log(res.data)
+                console.log(page.data.usernickname)
+                // page.getUserNickname(options)
+            }
+        })  
+    },
+    getUserNickname: function(options) {
+        const page = this
+        console.log(page.data.item)
+        const userId = page.data.item.user_id
+        console.log("user id:", userId)
+        wx.request({
+            url: `${app.globalData.baseUrl}/users/${userId}/show_nickname`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const usernickname = res.data;
+                page.setData({
+                    usernickname: usernickname
+                });
+                console.log(page.data)
             }
         })  
     },
@@ -22,8 +44,7 @@ Page({
      * Page initial data
      */
     data: {
-        items: [],
-        item: null
+
     },
 
     /**

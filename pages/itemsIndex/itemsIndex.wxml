@@ -18,8 +18,10 @@
 </view>
 
 <view class="main"wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
-<!-- <image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image> -->
+<view class="card">
+<image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
 <text calss="detail">{{item.id}} - {{item.name}}</text>
+</view>
 </view>
 </view>
 </view>

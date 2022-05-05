@@ -15,6 +15,7 @@
     width: 100rpx;
     border: 2px solid yellow;
     flex-direction: inherit;
+    background-color: rgb(236, 104, 115);
 }  
 
 .icons:first-child {
@@ -39,10 +40,18 @@
 
 .main{
     float: left;
-    width: calc(33.333%-20rpx);
     padding: 10rpx; 
-    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.item-image-menu{
+    border-radius: 100%;
     border: 2px solid #eaf75e;
+    box-shadow: 5px;
+}
+
+.card{
+    float: left;
 }
 /* .icons{
     height: 100%;

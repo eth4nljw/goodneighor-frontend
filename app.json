@@ -1,16 +1,19 @@
 {
   "pages":[
+      "pages/custom-tab-bar/index",
       "pages/index/index",
       "pages/logs/logs",
       "pages/itemsIndex/itemsIndex",
       "pages/itemsShow/itemsShow"
   ],
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "好邻居 (Good Neighbour)",
     "navigationBarTextStyle":"black"
   },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

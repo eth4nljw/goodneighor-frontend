@@ -1,4 +1,4 @@
-// pages/custom-tab-bar/index.js
+// pages/custom-tab-bar/custom-tab-bar.js
 Page({
 
     /**

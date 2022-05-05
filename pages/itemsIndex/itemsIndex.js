@@ -11,7 +11,6 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-      console.log("res:", res)
       const items = res.data;
       page.setData({
         items: items,
@@ -25,7 +24,6 @@ Page({
     */
    goToItemShow: function(e) {
         const itemId = e.currentTarget.dataset.id
-        console.log("itemId:", itemId)
         wx.navigateTo({
           url: `/pages/itemsShow/itemsShow?id=${itemId}`
         })

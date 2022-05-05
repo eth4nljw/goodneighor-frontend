@@ -1,1 +1,49 @@
 /* pages/itemsIndex/itemsIndex.wxss */
+.logo{
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 20%;
+    margin-bottom: 2%;
+    background-color: aqua;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.icons {
+    width: 100rpx;
+    border: 2px solid yellow;
+    flex-direction: inherit;
+}  
+
+.icons:first-child {
+    margin-right: 10px;
+} 
+.icons li{
+    padding-bottom: 10rpx;
+}
+
+.index{
+    width: 100%;
+}
+
+.navbar{
+    text-align: right;
+} 
+
+.item{
+    flex: content;
+    border: 2px solid yellow;
+}
+
+.main{
+    float: left;
+    width: calc(33.333%-20rpx);
+    padding: 10rpx; 
+    border-radius: 50%;
+    border: 2px solid #eaf75e;
+}
+/* .icons{
+    height: 100%;
+} */  

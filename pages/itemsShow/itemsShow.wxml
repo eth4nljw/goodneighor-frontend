@@ -1,0 +1,14 @@
+<!-- TODO: change the below with show one item only code -->
+<view>
+<image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
+</view>
+<view>
+<view>头像（user image）</view>
+<text>{{item.category}} - {{item.name}}</text>
+<view class="description">
+Item:type--Freebil or Exchange
+description
+</view>
+</view>
+<!-- end of todo -->
+

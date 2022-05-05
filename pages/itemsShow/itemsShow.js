@@ -2,12 +2,28 @@
 let app = getApp()
 
 Page({
-
+    getItem: function(options) {
+        const page = this
+        const itemId = options.id
+        wx.request({
+            url: `${app.globalData.baseUrl}/items/${itemId}`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                console.log("res:", res)
+                const item = res.data;
+                page.setData({
+                    item: item,
+                });
+            }
+        })  
+    },
     /**
      * Page initial data
      */
     data: {
-        items: []
+        items: [],
+        item: null
     },
 
     /**
@@ -15,23 +31,7 @@ Page({
      */
     onLoad: function (options) {
         const page = this
-        const itemId = options.id
-        const item = `app.globalData.baseUrl}/items/${itemId}`
-        this.setData(item)
-        console.log("item:" + item)
-
-        wx.request({
-            url: `${app.globalData.baseUrl}/items/${itemId}`,
-            method: 'GET',
-            header: app.globalData.header,
-            success(res) {
-            console.log("res:", res)
-            const item = res.data;
-            page.setData({
-                item: item,
-               });
-            }
-        })
+        page.getItem(options)
     },
 
     /**

@@ -1,4 +1,8 @@
 // app.js
+
+import event from "./utils/event"
+wx.event = event
+
 App({
   onLaunch() {
       const app = this
@@ -20,6 +24,7 @@ App({
                 app.globalData.header = res.data.headers // save JWT to be used when making a request
                 app.globalData.user = res.data.user
                 console.log("login success", app.globalData.user)
+                wx.event.emit("loginsuccess")
               }
             })
           } else {
@@ -32,7 +37,8 @@ App({
     userInfo: null,
     baseUrl: "http://localhost:3000/api/v1",
     header: null,
-    user: null
+    user: null,
+    items: null
   }
 })
 

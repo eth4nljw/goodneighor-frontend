@@ -42,6 +42,7 @@
     float: left;
     padding: 10rpx; 
     background-color: whitesmoke;
+    width: 100%;
 }
 
 .item-image-menu{
@@ -52,6 +53,14 @@
 
 .card{
     float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10rpx;
+    min-width: 150rpx;
+}
+
+.detail{
+    text-align: center;
 }
 /* .icons{
     height: 100%;

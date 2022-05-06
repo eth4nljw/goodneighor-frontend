@@ -12,6 +12,6 @@
 .btn{
     margin-top: 25rpx;
     background-color: black;
-    color: white;
+    color: whitesmoke;
 }
 

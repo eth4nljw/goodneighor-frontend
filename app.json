@@ -13,6 +13,20 @@
     "navigationBarTextStyle":"black"
   },
 
+  "tabBar": {
+      "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+      "pagePath": "pages/itemsIndex/itemsIndex",
+      "text": "主页"},{
+      "pagePath": "pages/index/index",
+      "text": "测试"
+    }]
+  },
+
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {}
 }

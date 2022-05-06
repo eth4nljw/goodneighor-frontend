@@ -23,5 +23,5 @@
 </view>
 
 <view>
-<button bindtap="goToItemsIndex">items index</button>
+<!-- <button bindtap="goToItemsIndex">items index</button> -->
 </view>

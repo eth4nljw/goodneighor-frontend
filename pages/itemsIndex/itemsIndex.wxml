@@ -1,5 +1,7 @@
 <view class="logo">Items index page</view>
-
+<view class="navbar">
+<text>search bar</text>
+</view>
 <view class="flex-container">
 <view class="icons">
 <ul class>
@@ -12,15 +14,13 @@
 </ul>
 </view>
 
-<view class="index">
-<view class="navbar">
-<text>search bar</text>
-</view>
+<view class="index other-container">
+
 
 <view class="main"wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
 <view class="card">
 <image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
-<text calss="detail">{{item.id}} - {{item.name}}</text>
+<text calss="detail"> {{item.name}}</text>
 </view>
 </view>
 </view>

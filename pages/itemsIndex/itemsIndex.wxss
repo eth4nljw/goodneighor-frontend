@@ -9,10 +9,11 @@
 
 .flex-container {
     display: flex;
+    background-color:whitesmoke;
 }
 
 .icons {
-    width: 100rpx;
+    width: 160rpx;
     border: 2px solid yellow;
     flex-direction: inherit;
     background-color: rgb(236, 104, 115);
@@ -40,15 +41,18 @@
 
 .main{
     float: left;
-    padding: 10rpx; 
-    background-color: whitesmoke;
-    width: 100%;
+    padding: 5rpx; 
+    /* background-color: whitesmoke; */
+    width: 180rpx;
+    margin-top: 18rpx;
 }
 
 .item-image-menu{
     border-radius: 100%;
     border: 2px solid #eaf75e;
     box-shadow: 5px;
+    width: 140rpx;
+    height: 140rpx;
 }
 
 .card{
@@ -65,3 +69,11 @@
 /* .icons{
     height: 100%;
 } */  
+.other-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.navbar {
+    border: 1rpx solid;
+}

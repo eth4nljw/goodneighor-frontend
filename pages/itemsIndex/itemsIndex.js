@@ -20,14 +20,27 @@ Page({
   },
   
     /** 
-    * Bindtap for go to the item show
+    *              BINDTAPS
     */
+
+
+    // Bindtap for go to item show
    goToItemShow: function(e) {
         const itemId = e.currentTarget.dataset.id
         wx.navigateTo({
           url: `/pages/itemsShow/itemsShow?id=${itemId}`
         })
    },
+
+  // Bindtap for go to item new
+   goToItemNew: function(e) {
+        wx.navigateTo({
+          url: `/pages/itemsNew/itemsNew`
+        })
+   },
+
+
+
     /**
      * Page initial data
      */

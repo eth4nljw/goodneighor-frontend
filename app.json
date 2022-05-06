@@ -1,6 +1,5 @@
 {
   "pages":[
-      "pages/custom-tab-bar/index",
       "pages/index/index",
       "pages/logs/logs",
       "pages/itemsIndex/itemsIndex",

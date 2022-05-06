@@ -4,7 +4,8 @@
 </view>
 <view class="flex-container">
 <view class="icons">
-<ul class>
+<ul>
+<li bindtap="goToItemNew">new</li>
 <li><navigator url="#">全部</navigator></li>
 <li><navigator url="#">学习</navigator></li>
 <li><navigator url="#">运动</navigator></li>

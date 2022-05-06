@@ -1,0 +1,92 @@
+<view>Item Form</view>
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="itemSubmit" catchsubmit="bindSubmit">
+
+        <view class="page-section">
+                <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                        <input class="weui-input" name="name" placeholder="Enter Item Name"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="page-section page-section-gap">
+            <view class="section__title"></view>
+            <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
+                <view class="picker">
+                    Product Category: {{itemCategory[category_index]}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="page-section">
+                <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                        <input class="weui-input" name="image_url" placeholder="Enter Item Image url" />
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="page-section page-section-gap">
+            <view class="page-section-title">Freebie</view>
+            <switch name="is_freebie"/>
+        </view>
+
+        <view class="page-section page-section-gap" hidden="true">
+                <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                        <input class="weui-input" name="value" value="1" disabled="true"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="page-section page-section-gap">
+                <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                        <input class="weui-input" name="request" placeholder="What do you request in return?"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="page-section page-section-gap">
+            <view class="section__title"></view>
+            <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
+                <view class="picker">
+                    Product Condition: {{itemCondition[condition_index]}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="page-section page-section-gap">
+            <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                    <textarea placeholder="这是一个可以自动聚焦的textarea" name="description" />
+                </view>
+            </view>
+            </view>
+        </view>    
+
+        
+
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+      </view>
+    </form>
+  </view>
+
+</view>
+
+
+

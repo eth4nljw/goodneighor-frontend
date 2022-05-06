@@ -1,5 +1,5 @@
 {
-    "projectname": "%E5%A5%BD%E9%82%BB%E5%B1%85",
+    "projectname": "goodneighor-frontend",
     "setting": {
         "compileHotReLoad": true,
         "urlCheck": false
@@ -32,6 +32,13 @@
                 {
                     "name": "",
                     "pathName": "pages/custom-tab-bar/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/itemsIndex/itemsIndex",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

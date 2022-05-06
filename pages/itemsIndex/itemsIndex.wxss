@@ -1,10 +1,7 @@
 /* pages/itemsIndex/itemsIndex.wxss */
-.logo{
-    font-size: larger;
-    text-align: center;
-    padding-bottom: 20%;
-    margin-bottom: 2%;
-    background-color: aqua;
+.title{
+    display: flex;
+    width: 100%;
 }
 
 .flex-container {
@@ -76,4 +73,14 @@
 
 .navbar {
     border: 1rpx solid;
+}
+
+.pic{
+    display: block;
+    width: 100rpx;
+    height: 70rpx;
+}
+
+.icons:nth-child(2){
+    margin-top: 20rpx;
 }

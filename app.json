@@ -4,7 +4,8 @@
       "pages/index/index",
       "pages/logs/logs",
       "pages/itemsIndex/itemsIndex",
-      "pages/itemsShow/itemsShow"
+      "pages/itemsShow/itemsShow",
+      "pages/itemsNew/itemsNew"
   ],
 
   "window":{

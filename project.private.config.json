@@ -45,7 +45,7 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/index/index",
+                    "pathName": "pages/itemsShow/itemsShow",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

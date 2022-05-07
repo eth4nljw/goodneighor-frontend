@@ -1,4 +1,4 @@
-<view class="logo">Items index page</view>
+<view class="logo">All items in your compound</view>
 <view class="navbar">
 <text>search bar</text>
 </view>

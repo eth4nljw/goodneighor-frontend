@@ -1,3 +1,4 @@
+<view class="logo">All items in your compound</view>
 <image class="title" src="/image/title.png"></image>
 <view class="navbar">
 <text>search bar</text>

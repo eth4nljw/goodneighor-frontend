@@ -19,7 +19,6 @@
             <text>物品描述</text>
         </view>
     </view>
-
 </view>
 <button class="btn">我想要这个</button>
 

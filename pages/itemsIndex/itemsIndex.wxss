@@ -13,7 +13,7 @@
     width: 160rpx;
     border: 2px solid yellow;
     flex-direction: inherit;
-    background-color: rgb(236, 104, 115);
+    background-color: #fa8181;
 }  
 
 .icons:first-child {

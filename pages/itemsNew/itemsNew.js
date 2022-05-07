@@ -29,7 +29,7 @@ Page({
             data: item,
             success() {
                 //TODO redirect to item bids when done'
-                wx.switchTab({
+                wx.reLaunch({
                     url: '/pages/itemsIndex/itemsIndex'
                 })
             }

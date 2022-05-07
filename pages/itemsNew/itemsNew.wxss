@@ -44,7 +44,7 @@
 
 
 .btn-area{
-    margin-top: -100rpx;
+    /* margin-top: -100rpx; */
     display: flex;
     text-align: center;
 }

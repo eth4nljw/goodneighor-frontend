@@ -1,3 +1,4 @@
+<image class="title" src="/image/title.png"></image>
 <view>Item Form</view>
 <view class="container">
   <view class="page-body">
@@ -7,7 +8,7 @@
                 <view class="weui-cells weui-cells_after-title">
                 <view class="weui-cell weui-cell_input">
                     <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input" name="name" placeholder="Enter Item Name"/>
+                        <input class="weui-input-name" name="name" placeholder="输入宝贝名称"/>
                     </view>
                 </view>
             </view>
@@ -16,8 +17,8 @@
         <view class="page-section page-section-gap">
             <view class="section__title"></view>
             <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
-                <view class="picker">
-                    Product Category: {{itemCategory[category_index]}}
+                <view class="picker-c">
+                    宝贝类别: {{itemCategory[category_index]}}
                 </view>
             </picker>
         </view>
@@ -26,15 +27,23 @@
                 <view class="weui-cells weui-cells_after-title">
                 <view class="weui-cell weui-cell_input">
                     <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input" name="image_url" placeholder="Enter Item Image url" />
+                        <input class="weui-input-image" name="image_url" placeholder="上传图片" />
                     </view>
                 </view>
             </view>
         </view>
 
+     <view class="options">
         <view class="page-section page-section-gap">
-            <view class="page-section-title">Freebie</view>
-            <switch name="is_freebie"/>
+            <view class="page-section-title">无偿</view> <switch name="is_freebie"/>
+        </view>
+        <view class="page-section page-section-gap">
+            <view class="section__title"></view>
+            <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
+                <view class="picker">
+                    宝贝质量: {{itemCondition[condition_index]}}
+                </view>
+            </picker>
         </view>
 
         <view class="page-section page-section-gap" hidden="true">
@@ -46,32 +55,24 @@
                 </view>
             </view>
         </view>
-
+        </view>
 
         <view class="page-section page-section-gap">
                 <view class="weui-cells weui-cells_after-title">
                 <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input" name="request" placeholder="What do you request in return?"/>
+                    <view class="weui-cell__bd" style="margin: 80rpx 0" >
+                        <input class="weui-input" name="request" placeholder="通过交换想获得什么?"/>
                     </view>
                 </view>
             </view>
         </view>
 
-        <view class="page-section page-section-gap">
-            <view class="section__title"></view>
-            <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
-                <view class="picker">
-                    Product Condition: {{itemCondition[condition_index]}}
-                </view>
-            </picker>
-        </view>
 
         <view class="page-section page-section-gap">
             <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                    <textarea placeholder="这是一个可以自动聚焦的textarea" name="description" />
+                    <textarea placeholder="宝贝详情" name="description" />
                 </view>
             </view>
             </view>
@@ -81,7 +82,7 @@
 
 
       <view class="btn-area">
-        <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+        <button class="submit" type="primary" formType="submit">提交我的宝贝</button>
       </view>
     </form>
   </view>

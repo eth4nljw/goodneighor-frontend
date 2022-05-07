@@ -1,17 +1,36 @@
 <view class="logo">All items in your compound</view>
+<image class="title" src="/image/title.png"></image>
 <view class="navbar">
 <text>search bar</text>
 </view>
 <view class="flex-container">
 <view class="icons">
 <ul>
-<li bindtap="goToItemNew">new</li>
-<li><navigator url="#">全部</navigator></li>
-<li><navigator url="#">学习</navigator></li>
-<li><navigator url="#">运动</navigator></li>
-<li><navigator url="#">电器</navigator></li>
-<li><navigator url="#">家具</navigator></li>
-<li><navigator url="#">时尚</navigator></li>
+<li bindtap="goToItemNew">新建</li>
+<li>
+<navigator url="#">全部</navigator>
+<image class="pic" src="/image/find.png"></image>
+</li>
+<li>
+<navigator url="#">学习</navigator>
+<image class="pic" src="/image/study.png"></image>
+</li>
+<li>
+<navigator url="#">运动</navigator>
+<image class="pic" src="/image/sport.png"></image>
+</li>
+<li>
+<navigator url="#">电器</navigator>
+<image class="pic" src="/image/electrice_appliance.png"></image>
+</li>
+<li>
+<navigator url="#">家具</navigator>
+<image class="pic" src="/image/homeware.png"></image>
+</li>
+<li>
+<navigator url="#">时尚</navigator>
+<image class="pic" src="/image/clothes.png"></image>
+</li>
 </ul>
 </view>
 

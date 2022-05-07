@@ -57,7 +57,7 @@ Page({
     data: {
         pickerHidden: true,
         chosen: '',
-        itemCondition: ["Brand New", "In Working Condition", "Broken"],
+        itemCondition: ["全新", "二手", "损坏"],
         itemCategory: ["运动", "电器", "家具", "时尚"]
       },
 

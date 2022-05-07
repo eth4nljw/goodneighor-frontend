@@ -9,6 +9,7 @@
         <view class="other-container">
             <text>标题</text>
             <text>微信号</text>
+            <text>{{item.category}}</text>
         </view>
         <view class="make-like-button1">1积分</view>
         <view class="make-like-button2">可兑换</view>

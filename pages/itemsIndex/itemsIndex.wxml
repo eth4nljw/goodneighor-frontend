@@ -7,30 +7,30 @@
 <view class="icons">
 <ul>
 <li bindtap="goToItemNew">新建</li>
-<li>
-<navigator url="#">全部</navigator>
+
+<li bindtap="getItems">全部</li>
 <image class="pic" src="/image/find.png"></image>
-</li>
-<li>
-<navigator url="#">学习</navigator>
+
+
+<li bindtap="goToItemsStudy">学习</li>
 <image class="pic" src="/image/study.png"></image>
-</li>
-<li>
-<navigator url="#">运动</navigator>
+
+
+<li bindtap="goToItemsSport">运动</li>
 <image class="pic" src="/image/sport.png"></image>
-</li>
-<li>
-<navigator url="#">电器</navigator>
+
+
+<li bindtap="goToItemsEA">电器</li>
 <image class="pic" src="/image/electrice_appliance.png"></image>
-</li>
-<li>
-<navigator url="#">家具</navigator>
+
+
+<li bindtap="goToItemsHW">家具</li>
 <image class="pic" src="/image/homeware.png"></image>
-</li>
-<li>
-<navigator url="#">时尚</navigator>
+
+
+<li bindtap="goToItemsF">时尚</li>
 <image class="pic" src="/image/clothes.png"></image>
-</li>
+
 </ul>
 </view>
 

@@ -8,7 +8,7 @@ Page({
     * Bindtap for go to the item show
     */
    goToItemsIndex: function(e) {
-    wx.navigateTo({
+    wx.reLaunch({
       url: `/pages/itemsIndex/itemsIndex`
     })
 },

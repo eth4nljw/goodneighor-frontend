@@ -38,6 +38,77 @@ Page({
           url: `/pages/itemsNew/itemsNew`
         })
    },
+   goToItemsStudy: function(e) {
+       const page = this
+       wx.request({
+           url: `${app.globalData.baseUrl}/items?cate=学习`,
+           method: 'GET',
+           header: app.globalData.header,
+           success(res) {
+               const items = res.data;
+               page.setData({
+                   items: items,
+                });
+            }
+        })
+    },
+    goToItemsSport: function(e) {
+        const page = this
+        wx.request({
+            url: `${app.globalData.baseUrl}/items?cate=体育`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const items = res.data;
+                page.setData({
+                    items: items,
+                 });
+             }
+         })
+     },
+     goToItemsEA: function(e) {
+        const page = this
+        wx.request({
+            url: `${app.globalData.baseUrl}/items?cate=电器`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const items = res.data;
+                page.setData({
+                    items: items,
+                 });
+             }
+         })
+     },
+     goToItemsHW: function(e) {
+        const page = this
+        wx.request({
+            url: `${app.globalData.baseUrl}/items?cate=家具`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const items = res.data;
+                page.setData({
+                    items: items,
+                 });
+             }
+         })
+     },
+     goToItemsF: function(e) {
+        const page = this
+        wx.request({
+            url: `${app.globalData.baseUrl}/items?cate=时尚`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const items = res.data;
+                page.setData({
+                    items: items,
+                 });
+             }
+         })
+     },
+
 
 
 

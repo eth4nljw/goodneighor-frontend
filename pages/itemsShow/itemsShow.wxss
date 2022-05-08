@@ -10,17 +10,6 @@
     
 }
 
-
-
-.wechat-user-image {
-    border-radius: 40rpx;
-    border: 2px solid gainsboro;
-    box-shadow: 5px;
-    width: 140rpx;
-    height: 140rpx;
-    top: -75rpx;
-    position: relative;
-  }
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -31,6 +20,7 @@
     display: flex;
     flex-direction: column;
     margin-top :-10rpx;
+    padding: 8rpx;
 }
 
 .make-like-button1{
@@ -84,4 +74,13 @@
     left: 150rpx;
     z-index: 999;
     background-color: white;
+}
+
+
+.userinfo-avatar {
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
 }

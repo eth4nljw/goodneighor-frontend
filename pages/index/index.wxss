@@ -16,7 +16,7 @@ border-radius: 50%;
 margin-top: 200px;
 }
 .container{
-    background-color: mistyrose;
+    background-color: seashell;
 }
 .list{
     text-align: center;
@@ -29,7 +29,7 @@ margin-top: 200px;
     margin-top: 90rpx;
 }
 .cover{
-    margin-top: -200rpx;
+    margin-top: -rpx;
     height: 175rpx;
 }
 
@@ -48,4 +48,13 @@ margin-top: 200px;
 
 .cover-all{
     background-color: mistyrose;
+}
+
+.addpadding{
+    padding: 50rpx;
+    margin: 40rpx;
+    background-color: gainsboro;
+    border-radius: 30rpx;
+    width: 230rpx;
+    height: 100rpx;
 }

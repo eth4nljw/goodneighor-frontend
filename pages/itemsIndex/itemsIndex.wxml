@@ -1,6 +1,7 @@
 <image class="title" src="/image/title.png"></image>
 <view class="navbar">
-<view>search bar</view>
+<input class="search" name="userName" placeholder="请搜索你想要的宝贝"
+    bindinput="searchName"/>
 </view>
 <view class="flex-container">
 <view class="icons">

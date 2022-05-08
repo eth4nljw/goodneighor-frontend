@@ -7,17 +7,17 @@
     <view class="flex-container">
         <image src="{{item.image_url}}" class="wechat-user-image" />
         <view class="other-container">
-            <text>标题</text>
+            <text>{{item.name}}</text>
             <text>微信号</text>
             <view class="third-container">
                 <view class="make-like-button3">{{item.category}}</view>
-                <view class="make-like-button1">1积分</view>
+                <view class="make-like-button1">{{item.value}}积分</view>
                 <view class="make-like-button2">可兑换</view>
             </view>
         </view>
     </view>
     <view>
-        <text>物品描述</text>
+        <text>{{item.description}}</text>
     </view>
 </view>
 <button class="icon-small"><icon type="download" size="30"></icon></button>

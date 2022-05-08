@@ -109,6 +109,23 @@ Page({
          })
      },
 
+     searchName: function(e) {
+      const page = this
+      const name = e.detail.value
+      console.log(name)
+      wx.request({
+          url: `${app.globalData.baseUrl}/items?query=${name}`,
+          method: 'GET',
+          header: app.globalData.header,
+          success(res) {
+              const items = res.data;
+              page.setData({
+                  items: items,
+               });
+           }
+       })
+   },
+
 
 
 

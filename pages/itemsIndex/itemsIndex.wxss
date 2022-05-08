@@ -47,14 +47,14 @@
 
 .main{
     float: left;
-    padding: 5rpx;
+    /* padding: 5rpx; */
     /* background-color: whitesmoke; */
-    width: 180rpx;
-    margin-top: 18rpx;
+    width: 150rpx;
+    /* margin-top: 18rpx; */
 }
 
 .item-image-menu{
-    border-radius: 100%;
+    /* border-radius: 100%; */
     border: 2px solid #eaf75e;
     box-shadow: 5px;
     width: 140rpx;
@@ -65,7 +65,7 @@
     float: left;
     width: 25%;
     box-sizing: border-box;
-    padding: 10rpx;
+    /* padding: 10rpx; */
     min-width: 150rpx;
 }
 

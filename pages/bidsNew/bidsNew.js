@@ -4,13 +4,13 @@ Page({
     bindSubmit(e) {
 
         let note = e.detail.value.note;
-        console.log(note)
+        let myItemId = e.detail.value.myItem;
         let bid = {
 
-        owner_item_id: 688,
-        taker_item_id: 725,
+        owner_item_id: this.data.itemId,
+        taker_item_id: myItemId,
         "status": "pending",
-        "note": "i want this one~",
+        "note": note,
         }
 
 
@@ -35,7 +35,7 @@ Page({
 
 
         wx.request({
-            url: `${app.globalData.baseUrl}/bids`,
+            url: `${app.globalData.baseUrl}/users/${app.globalData.user.id}/bids`,
             method: 'POST',
             header: app.globalData.header,
             data: bid,
@@ -53,12 +53,29 @@ Page({
 
     },
 
+    myItems: function() {
+        const page = this
+        wx.request({
+          url: `${app.globalData.baseUrl}/users/${app.globalData.user.id}/user_items`,
+          method: 'GET',
+          header: app.globalData.header,
+          success(res) {
+          const myItems = res.data;
+          page.setData({
+            myItems: myItems,
+          });
+        }
+      })
+      },
+
 
 
 
     getItem: function (options) {
         const page = this
         const itemId = options.id
+        const userId = app.globalData.user.id
+        
         wx.request({
             url: `${app.globalData.baseUrl}/items/${itemId}`,
             method: 'GET',
@@ -79,7 +96,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        user: app.globalData.user
+        user: app.globalData.user,
+        itemId: 0
 
     },
 
@@ -88,7 +106,13 @@ Page({
      */
     onLoad: function (options) {
         const page = this
+        const itemId = options.id
+        page.setData({
+            itemId: itemId
+        });
+        console.log(itemId)
         page.getItem(options)
+        page.myItems(options)
     },
 
     /**

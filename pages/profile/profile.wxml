@@ -6,3 +6,9 @@
 <text>支出</text><text>2积分</text>
 <navigator url="#">我的订单</navigator>
 </view>
+
+<image class="title" src="/image/title.png"></image>
+<view class="card">
+<image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
+<text calss="detail"> {{item.name}}</text>
+</view>

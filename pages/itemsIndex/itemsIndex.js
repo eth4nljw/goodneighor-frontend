@@ -27,7 +27,7 @@ Page({
     // Bindtap for go to item show
    goToItemShow: function(e) {
         const itemId = e.currentTarget.dataset.id
-        wx.navigateTo({
+        wx.reLaunch({
           url: `/pages/itemsShow/itemsShow?id=${itemId}`
         })
    },

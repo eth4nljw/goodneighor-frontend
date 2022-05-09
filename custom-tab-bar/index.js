@@ -9,10 +9,10 @@ Component({
         selectedIconPath: "/image/sport.png",
         text: "主页"
       }, {
-        pagePath: "/pages/index/index",
+        pagePath: "/pages/profile/profile",
         iconPath: "/image/study.png",
         selectedIconPath: "/image/homeware.png",
-        text: "测试"
+        text: "个人"
       }]
     },
     attached() {
@@ -21,7 +21,7 @@ Component({
       switchTab(e) {
         const data = e.currentTarget.dataset
         const url = data.path
-        wx.switchTab({url})
+        wx.reLaunch({url})
         this.setData({
           selected: data.index
         })

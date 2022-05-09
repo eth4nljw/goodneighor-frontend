@@ -1,2 +1,8 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<text>我的宝贝</text>
+<view class="bar">
+<text>全部</text>
+<text>获得</text><text>100积分</text>
+<text>支出</text><text>2积分</text>
+<navigator url="#">我的订单</navigator>
+</view>

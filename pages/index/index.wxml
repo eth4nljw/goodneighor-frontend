@@ -20,13 +20,14 @@
 
     </block>
 </view>
-<view>
-<ul class="list">
-<input class="address" placeholder="街道名称"/>
-<input class="address" placeholder="小区名称"/>
-<input class="address" placeholder="小区单元"/>
-<input class="address" placeholder="门牌号"/>
-</ul>
+<view class="list address">
+
+<input  placeholder="街道名称"/>
+<view class="addpadding">
+    <input  placeholder="小区单元,门牌号"/>
+</view>
+
+
 </view>
 <view class="usermotto">
     <!-- <text class="user-motto">{{motto}}</text> -->

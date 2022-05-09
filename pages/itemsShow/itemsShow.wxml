@@ -5,10 +5,12 @@
 
 <view>
     <view class="flex-container">
-        <image src="{{item.image_url}}" class="wechat-user-image" />
+        <view class="wechat-user-image">
+            <open-data  class="wechat-user-image" type="userAvatarUrl"></open-data>
+        </view>
         <view class="other-container">
             <text>{{item.name}}</text>
-            <text>微信号</text>
+            <open-data type="userNickName"></open-data>
             <view class="third-container">
                 <view class="make-like-button3">{{item.category}}</view>
                 <view class="make-like-button1">{{item.value}}积分</view>
@@ -20,10 +22,8 @@
         <text>{{item.description}}</text>
         <text>{{item.id}}</text>
     </view>
-    
+
 </view>
 <button class="icon-small"><icon type="download" size="30"></icon></button>
 <button class="icon-box-img" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
 <button class="icon-small-2"><icon type="download" size="30"></icon></button>
-
-

@@ -11,7 +11,6 @@
         <view class="other-container">
             <text>{{item.name}}</text>
             <open-data type="userNickName"></open-data>
->>>>>>> fad53737046dfd8c4727fe6b1f18d837e27bc772
             <view class="third-container">
                 <view class="make-like-button3">{{item.category}}</view>
                 <view class="make-like-button1">{{item.value}}积分</view>
@@ -22,20 +21,9 @@
     <view>
         <text>{{item.description}}</text>
     </view>
-</view>
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    </block>
-    <!-- <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
-  </view>
-</view>
 
+</view>
+<button class="go-bids" bindtap="goToBidsNew">我想要这个宝贝</button>
 <button class="icon-small"><icon type="download" size="30"></icon></button>
 <button class="icon-box-img"><icon type="success" size="70"></icon></button>
 <button class="icon-small-2"><icon type="download" size="30"></icon></button>

@@ -145,7 +145,7 @@ Page({
         wx.event.on("loginsuccess", page, page.getItems)
       } else {
         page.getItems()
-      }           
+      }      
     },
 
     /**

@@ -29,6 +29,12 @@ Page({
 
     },
 
+    goToBidsNew: function(e) {
+        wx.navigateTo({
+          url: `/pages/bidsNew/bidsNew`
+        })
+   },
+
     /**
      * Lifecycle function--Called when page load
      */

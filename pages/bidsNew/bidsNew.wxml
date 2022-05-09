@@ -1,0 +1,3 @@
+<!--pages/bidsNew/bidsNew.wxml-->
+<text>pages/bidsNew/bidsNew.wxml</text>
+<text>{{user.name}}</text>

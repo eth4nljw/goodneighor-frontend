@@ -53,6 +53,10 @@
     padding: 20rpx;
 }
 
+.go-bids{
+    top: 310rpx;
+}
+
 .icon-box-img{
     top: 320rpx ;
     background-color: white;

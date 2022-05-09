@@ -6,6 +6,7 @@
       "pages/itemsShow/itemsShow",
       "pages/itemsNew/itemsNew",
       "pages/bidsNew/bidsNew",
+      "pages/bids/bids",
       "pages/profile/profile"
   ],
 

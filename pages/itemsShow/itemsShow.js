@@ -32,8 +32,9 @@ Page({
       },
 
     goToBidsNew: function(e) {
+        const itemId = e.currentTarget.dataset.id
         wx.navigateTo({
-          url: `/pages/bidsNew/bidsNew`
+          url: `/pages/bidsNew/bidsNew?id=${itemId}`
         })
    },
 

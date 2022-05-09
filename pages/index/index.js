@@ -31,10 +31,22 @@ Page({
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
-        canIUseGetUserProfile: true
+        canIUseGetUserProfile: true,
       })
+      
     }
+
+
+    
   },
+
+  onReady: function () {
+
+    //app.globalData.user.nickname = 'aaa'
+    //console.log(app.globalData.user)
+    
+  },
+
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
@@ -52,6 +64,8 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
-    })
+    });
+
+    
   }
 })

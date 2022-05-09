@@ -19,28 +19,40 @@
 
     <view class="bids-avaliable" wx:if="{{item.status == 'avaliable'}}">
 
-    <view>此宝贝可以发起请求</view>
-    <form bindsubmit="bidSubmit" catchsubmit="bindSubmit">
-        <view class="page-section page-section-gap">
+        <view>此宝贝可以发起请求</view>
+        <view>请选择你的物品</view>
+
+
+
+        <form bindsubmit="bidSubmit" catchsubmit="bindSubmit">
+            <radio-group name="myItem">
+                <view class="main" wx:for="{{myItems}}" wx:for-item="myItem" data-id="{{myItem.id}}">
+                    <label>
+                        <radio value="{{myItem.id}}" checked />{{myItem.name}}
+                    </label>
+                </view>
+            </radio-group>
+
+            <view class="page-section page-section-gap">
                 <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 80rpx 0" >
-                        <input class="weui-input" name="note" placeholder="留下你的留言吧！"/>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd" style="margin: 80rpx 0">
+                            <input class="weui-input" name="note" placeholder="留下你的留言吧！" />
+                        </view>
                     </view>
                 </view>
             </view>
-        </view>
 
-    
-        <view class="btn-area">
-        <button class="submit" type="primary" formType="submit">提交要求</button>
-      </view>
-    </form>
+
+            <view class="btn-area">
+                <button class="submit" type="primary" formType="submit">提交要求</button>
+            </view>
+        </form>
     </view>
 
     <view class="bids-avaliable" wx:if="{{item.status == 'unavailable'}}">
         <view>此宝贝暂不可用</view>
     </view>
-    
-    
+
+
 </view>

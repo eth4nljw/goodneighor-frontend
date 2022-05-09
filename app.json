@@ -24,8 +24,8 @@
     "list": [{
       "pagePath": "pages/itemsIndex/itemsIndex",
       "text": "主页"},{
-      "pagePath": "pages/index/index",
-      "text": "测试"
+      "pagePath": "pages/profile/profile",
+      "text": "个人"
     }]
   },
 

@@ -25,7 +25,7 @@
     
     <view class="addmargin">
         <text>{{item.description}}</text>
+        <text>{{item.id}}</text>
     </view>
-
 <button class="icon-box-img" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
 

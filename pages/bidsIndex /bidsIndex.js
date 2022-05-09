@@ -1,6 +1,6 @@
-// pages/profile/profile.js
+// pages/bidsIndex /bidsIndex.js
 Page({
-   
+
     /**
      * 页面的初始数据
      */

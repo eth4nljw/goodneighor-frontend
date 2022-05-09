@@ -25,6 +25,7 @@ App({
                 app.globalData.user = res.data.user
                 console.log("login success", app.globalData.user)
                 wx.event.emit("loginsuccess")
+                
               }
             })
           } else {

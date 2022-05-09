@@ -23,7 +23,7 @@
     </view>
 
 </view>
-<button class="go-bids" bindtap="goToBidsNew">我想要这个宝贝</button>
+<!-- <button class="go-bids" bindtap="goToBidsNew">我想要这个宝贝</button> -->
 <button class="icon-small"><icon type="download" size="30"></icon></button>
-<button class="icon-box-img"><icon type="success" size="70"></icon></button>
+<button class="icon-box-img" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
 <button class="icon-small-2"><icon type="download" size="30"></icon></button>

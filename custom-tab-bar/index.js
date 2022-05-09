@@ -5,14 +5,21 @@ Component({
       selectedColor: "#3cc51f",
       list: [{
         pagePath: "/pages/itemsIndex/itemsIndex",
-        iconPath: "/image/clothes.png",
-        selectedIconPath: "/image/sport.png",
-        text: "主页"
+        iconPath: "/image/index.png",
+        selectedIconPath: "/image/indexb.png",
       }, {
         pagePath: "/pages/profile/profile",
-        iconPath: "/image/study.png",
-        selectedIconPath: "/image/homeware.png",
-        text: "个人"
+        iconPath: "/image/mineb.png",
+        selectedIconPath: "/image/mine.png",
+        // text: "我的bids"
+      },{
+        pagePath: "/pages/itemsNew/itemsNew",
+        iconPath: "/image/addb.png",
+        selectedIconPath: "/image/add.png",
+      },{
+        pagePath: "/pages/bidsNew/bidsNew",
+        iconPath: "/image/bidsb.png",
+        selectedIconPath: "/image/bids.png",
       }]
     },
     attached() {

@@ -33,7 +33,7 @@ Page({
                     url: '/pages/itemsIndex/itemsIndex'
                 })
             }
-            })  
+        })  
         
     },
     

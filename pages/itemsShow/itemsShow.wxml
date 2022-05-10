@@ -1,36 +1,21 @@
-<!-- TODO: change the below with show one item only code -->
-<view>
-<image class="item-image-large" src="{{item.photo}}" lazy-load="true"></image>
-</view>
-
-
-
-<view>
-<text>{{}}</text>
-</view>
-
-
-
-<view>
-    <view class="flex-container">
-        <view class="other-container">
-            <text>{{item.name}}</text>
+<view class="container">
+    <view class="item-image-area">
+        <image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
+    </view>
+    <view class="item-details">
+        <view class="item-details-row">
+            <view class="indicator item-category">{{item.category}}</view>
+            <view class="item-name">{{item.name}}</view>
         </view>
+        <view class="item-details-row">
+            <view wx:if="{{item.is_freebie}}" class="indicator item-freebie">免费</view>
+            <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange">可兑换</view>
+        </view>
+        <view wx:if="{{!item.is_freebie}}" class="item-details-row">
+            <view class="indicator item-request">要求: </view>
+            <view class="item-request-detail">{{item.request}}</view>
+        </view>
+        <view class="item-details-row">{{item.description}}</view>
+        <button class="" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
     </view>
 </view>
-        <view class="make-like-button2">可兑换</view>
-
-    <view class="flex-container">
-        <view class="make-like-button1">要求:</view>
-        <view class="addpadding2">
-            <text>{{item.request}}</text>
-        </view>
-
-    </view>
-
-
-
-    <view class="addmargin">
-        <text>{{item.description}}</text>
-    </view>
-<button class="icon-box-img" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>

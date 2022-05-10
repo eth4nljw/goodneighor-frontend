@@ -1,93 +1,54 @@
-<image class="title" src="/image/title.png"></image>
+<view class="card-container">
+    <view class="banner"><text>添加我的宝贝</text></view>
+    <view class="item-card-add">
+        <view class="item-card-add-column">
+            <view class="img-holder">
+                <view class="img-holder-button"><text>+</text></view>
+            </view>
+            <view class="item-form">
+                <form class="" bindsubmit="itemSubmit" catchsubmit="bindSubmit">
 
-
-<view class="container">
-  <view class="page-body">
-    <form bindsubmit="itemSubmit" catchsubmit="bindSubmit">
-
-        <view class="page-section">
-                <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input-name" name="name" placeholder="输入宝贝名称"/>
+                    <view class="form-row" id="name">
+                        <text class="form-label" >产品名称</text>
+                        <input class="form-input-field" name="name"/>
                     </view>
-                </view>
-            </view>
-        </view>
 
-        <view class="page-section page-section-gap">
-            <view class="section__title"></view>
-            <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
-                <view class="picker-c">
-                    宝贝类别: {{itemCategory[category_index]}}
-                </view>
-            </picker>
-        </view>
-
-        <view class="page-section">
-                <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input-image" name="image_url" placeholder="上传图片" />
+                    <view class="form-row" id="category">
+                        <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
+                            <view class="picker">宝贝类别:</view>
+                            <view class="picker-selection">{{itemCategory[category_index]}}</view>
+                        </picker>
                     </view>
-                </view>
-            </view>
-        </view>
 
-     <view class="options">
-        <view class="page-section page-section-gap">
-            <view class="page-section-title">无偿</view> <switch name="is_freebie"/>
-        </view>
-        <view class="page-section page-section-gap">
-            <view class="section__title"></view>
-            <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
-                <view class="picker">
-                    宝贝质量: {{itemCondition[condition_index]}}
-                </view>
-            </picker>
-        </view>
+                    <!-- <view class="form-row" id="image-url">
+                        <input class="form-input-field" name="image_url" placeholder="上传图片" />
+                    </view> -->
 
-        <view class="page-section page-section-gap" hidden="true">
-                <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                        <input class="weui-input" name="value" value="1" disabled="true"/>
+                    <view class="form-row">
+                        <view>无偿</view> 
+                        <switch bindchange="freebieBindPickerChange" name="is_freebie" checked="true"/>
+                        <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
+                            <view class="picker">宝贝质量:</view>
+                            <view class="picker-selection">{{itemCondition[condition_index]}}</view>
+                        </picker>
                     </view>
-                </view>
-            </view>
-        </view>
-        </view>
 
-        <view class="page-section page-section-gap">
-                <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__bd" style="margin: 80rpx 0" >
-                        <input class="weui-input" name="request" placeholder="通过交换想获得什么?"/>
+                    <view wx:if="{{is_freebie_state==false}}" id="request">
+                        <input class="form-input-field" name="request" placeholder="通过交换想获得什么?"/>
                     </view>
-                </view>
+
+                    <view id="description">
+                        <textarea placeholder="宝贝详情" name="description" />
+                    </view>
+                    <view class="submit-button">
+                        <button class="submit" type="primary" formType="submit">提交我的宝贝</button>
+                    </view>
+                </form>                    
             </view>
         </view>
-
-
-        <view class="page-section page-section-gap">
-            <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                    <textarea placeholder="宝贝详情" name="description" />
-                </view>
-            </view>
-            </view>
-        </view>    
-
-        
-
-
-      <view class="btn-area">
-        <button class="submit" type="primary" formType="submit">提交我的宝贝</button>
-      </view>
-    </form>
-  </view>
+    </view>
 </view>
+
 
 
 

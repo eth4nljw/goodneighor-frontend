@@ -1,5 +1,5 @@
 <image class="title" src="/image/title.png"></image>
-<image src="{{userInfo.avatarUrl}}" class="wechat-user-image" /><view class="container">
+
   <view class="page-body">
     <form bindsubmit="itemSubmit" catchsubmit="bindSubmit">
 
@@ -86,7 +86,6 @@
     </form>
   </view>
 
-</view>
 
 
 

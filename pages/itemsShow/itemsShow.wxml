@@ -3,11 +3,16 @@
 <image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
 </view>
 
+
+
+<view>
+<text>{{}}</text>
+</view>
+
+
+
 <view>
     <view class="flex-container">
-        <view class="wechat-user-image">
-            <open-data  class="wechat-user-image" type="userAvatarUrl"></open-data>
-        </view>
         <view class="other-container">
             <text>{{item.name}}</text>
             <open-data type="userNickName"></open-data>

@@ -1,35 +1,35 @@
 {
-  "pages":[
-      "pages/index/index",
-      "pages/logs/logs",
-      "pages/itemsIndex/itemsIndex",
-      "pages/itemsShow/itemsShow",
-      "pages/itemsNew/itemsNew",
-      "pages/bidsNew/bidsNew",
-      "pages/profile/profile"
-  ],
-
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "好邻居",
-    "navigationBarTextStyle":"black"
-  },
-
-  "tabBar": {
-      "custom": true,
-    "color": "#000000",
-    "selectedColor": "#000000",
-    "backgroundColor": "#000000",
-    "list": [{
-      "pagePath": "pages/itemsIndex/itemsIndex",
-      "text": "主页"},{
-      "pagePath": "pages/profile/profile",
-      "text": "个人"
-    }]
-  },
-
-  "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "usingComponents": {}
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/itemsIndex/itemsIndex",
+        "pages/itemsShow/itemsShow",
+        "pages/itemsNew/itemsNew",
+        "pages/profile/profile"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "好邻居",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/itemsIndex/itemsIndex",
+                "text": "主页"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "个人"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {}
 }

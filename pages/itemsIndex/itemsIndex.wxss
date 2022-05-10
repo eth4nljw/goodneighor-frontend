@@ -1,97 +1,45 @@
 /* pages/itemsIndex/itemsIndex.wxss */
-.logo{
-    font-size: larger;
-    text-align: center;
-    padding-bottom: 20%;
-    margin-bottom: 2%;
-    background-color: whitesmoke;
+/* Menu */
+.menu-container{
+    background-color: #ffc2b4;
 }
 
-.title{
-    display: flex;
-    width: 100%;
-}
-
-.flex-container {
-    display: flex;
-    background-color:whitesmoke;
-}
-
-.icons {
-    width: 160rpx;
-    /* border: 2px solid yellow; */
-    flex-direction: inherit;
-    background-color: rgba(236, 104, 115, 0.1);
-}
-
-.icons:first-child {
-    margin-right: 10px;
-}
-.icons li{
-    padding-bottom: 10rpx;
-}
-
-.index{
-    width: 100%;
-}
-
-.navbar{
-    text-align: right;
-}
-
-.item{
-    flex: content;
-    /* border: 2px solid yellow; */
-    background-color: rgba(73   , 73, 73, 0.5);
-}
-
-.main{
-    float: left;
-    /* padding: 5rpx; */
-    /* background-color: whitesmoke; */
-    width: 150rpx;
-    /* margin-top: 18rpx; */
-}
-
-.item-image-menu{
-    /* border-radius: 100%; */
-    border: 2px solid #eaf75e;
-    box-shadow: 5px;
-    width: 140rpx;
-    height: 140rpx;
-}
-
-.card{
-    float: left;
-    width: 25%;
-    box-sizing: border-box;
-    /* padding: 10rpx; */
-    min-width: 150rpx;
-}
-
-.detail{
-    text-align: center;
-}
-/* .icons{
-    height: 100%;
-} */
-.other-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+/* Category Bar */
 
 .navbar {
-    border: 1rpx solid;
-}
-
-.pic{
+    background-color: #ffc2b4;
+    overflow: hidden;
     display: block;
-    width: 100rpx;
-    height: 70rpx;
+  }
+
+.navbar-item {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.navbar-item-selected{
+    /* border-radius: 20rpx; */
+    background-color: #FA8072;
+    border-radius: 10% 10% 0 0;
+    font-weight: bold;
 }
 
-.icons:nth-child(2){
-    margin-top: 20rpx;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .grid {
+    padding-top: 60rpx;
+  }
+/* searchbox */
+.searchbar{
+    color: white;
+    background-color: #ffc2b4;
+    border: none;
 }
 
 .search{
@@ -101,12 +49,14 @@
     font-weight: normal;
     display: block;
     width: 310rpx;
-    background: none;
-    outline: none;
-    border: none;
-    padding: 0;
+    padding: 5rpx;
+    margin: 5rpx;
     height: 2.545455em;
     z-index: 1;
     position: relative;
-    top: -1px;
+}
+
+.placeholder {
+    color: white;
+    text-align: center;
 }

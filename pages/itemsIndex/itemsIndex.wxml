@@ -41,7 +41,7 @@
 <view class="main" wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
 <view class="card">
 <image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
-<text calss="detail"> {{item.name}}</text>
+<text class="detail"> {{item.name}}</text>
 </view>
 </view>
 </view>

@@ -45,7 +45,7 @@ Page({
                     wx.navigateTo({
                         url: `/pages/bids/bids`
                     })
-                }, 3000) // 等待后跳转页面
+                }, 2000) // 等待后跳转页面
             }
         })
 
@@ -75,7 +75,7 @@ Page({
         const page = this
         const itemId = options.id
         const userId = app.globalData.user.id
-        
+        console.log(options)
         wx.request({
             url: `${app.globalData.baseUrl}/items/${itemId}`,
             method: 'GET',
@@ -87,7 +87,6 @@ Page({
                     item: item,
                     usernickname: usernickname
                 });
-                console.log(res.data)
                 console.log(page.data.usernickname)
             }
         })

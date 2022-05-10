@@ -51,7 +51,6 @@
 }
 
 .submit{
-    margin-top: -130rpx;
     text-align: center;
 }
 

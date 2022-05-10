@@ -1,54 +1,28 @@
-<image class="title" src="/image/title.png"></image>
-<view class="navbar">
-<input class="search" name="userName" placeholder="请搜索你想要的宝贝"
-    bindinput="searchName"/>
+<view class="menu-container">
+    <image class="banner" mode="widthFix" src="/image/title.png"></image>
+    <view class="searchbar">
+        <input class="search" name="userName" placeholder="请搜索你想要的宝贝" placeholder-class="placeholder" bindinput="searchName"/>
+    </view>
+
+    <view class="navbar">
+            <!-- <view bindtap="goToItemNew" class="navbar-item">新建</view> -->
+            <view bindtap="getItems" class="navbar-item {{itemCategory==='全部'? 'navbar-item-selected':''}}" data-category='全部'><text>全部</text></view>
+            <view bindtap="goToItemsStudy" class="navbar-item {{itemCategory==='学习'? 'navbar-item-selected':''}}" data-category='学习'><text>学习</text></view>
+            <view bindtap="goToItemsSport" class="navbar-item {{itemCategory==='体育'? 'navbar-item-selected':''}}" data-category='运动'>体育</view>
+            <view bindtap="goToItemsEA" class="navbar-item {{itemCategory==='电器'? 'navbar-item-selected':''}}" data-category='电器'>电器</view>
+            <view bindtap="goToItemsHW" class="navbar-item {{itemCategory==='家具'? 'navbar-item-selected':''}}" data-category='家具'>家具</view>
+            <view bindtap="goToItemsF" class="navbar-item {{itemCategory==='时尚'? 'navbar-item-selected':''}}" data-category='时尚'>时尚</view>
+    </view>
 </view>
-<view class="flex-container">
-<view class="icons">
-<ul>
-<li bindtap="goToItemNew">新建</li>
-<image class="pic" src="/image/find.png"></image>
-
-<li bindtap="getItems">全部</li>
-<image class="pic" src="/image/find.png"></image>
-
-
-<li bindtap="goToItemsStudy">学习</li>
-<image class="pic" src="/image/study.png"></image>
-
-
-<li bindtap="goToItemsSport">运动</li>
-<image class="pic" src="/image/sport.png"></image>
-
-
-<li bindtap="goToItemsEA">电器</li>
-<image class="pic" src="/image/electrice_appliance.png"></image>
-
-
-<li bindtap="goToItemsHW">家具</li>
-<image class="pic" src="/image/homeware.png"></image>
-
-
-<li bindtap="goToItemsF">时尚</li>
-<image class="pic" src="/image/clothes.png"></image>
-
-</ul>
-</view>
-
-<view class="index other-container">
-
-
-<view class="main" wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
-<view class="card">
-<image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
-<text class="detail"> {{item.name}}</text>
-</view>
-</view>
-</view>
-</view>
-<!-- </view> -->
-
-
-<footer>
-navbar
-</footer>
+    <view class="grid">
+        <view wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
+            <view class="card">
+                <image class="card-image" src="/image/placeholder.png" lazy-load="true" mode="widthFix"></image>
+                <view class="card-text">
+                    <text class="card-item-name"> {{item.name}}</text>
+                    <text wx:if="{{item.is_freebie}}" class="card-item-type free">免费</text>
+                    <text wx:if="{{!item.is_freebie}}" class="card-item-type exchangable">可兑换</text>
+                </view>
+            </view>
+        </view>
+    </view>

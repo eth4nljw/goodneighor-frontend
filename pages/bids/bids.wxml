@@ -1,5 +1,4 @@
 <!--pages/bids/bids.wxml-->
-
 <image class="title" src="/image/mybids.jpg"></image>
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
     <view>

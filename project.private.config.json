@@ -65,7 +65,21 @@
                     "scene": null
                 },
                 {
-                    "name": "",
+                    "name": "new item",
+                    "pathName": "pages/itemsNew/itemsNew",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "Bids New",
+                    "pathName": "pages/bidsNew/bidsNew",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "Bids",
                     "pathName": "pages/bids/bids",
                     "query": "",
                     "launchMode": "default",

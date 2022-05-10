@@ -5,6 +5,7 @@ Page({
     getItem: function(options) {
         const page = this
         const itemId = options.id
+        console.log("the current item:", itemId)
         wx.request({
             url: `${app.globalData.baseUrl}/items/${itemId}`,
             method: 'GET',
@@ -18,6 +19,7 @@ Page({
                 });
                 console.log(res.data)
                 console.log(page.data.usernickname)
+                console.log("fuck")
             }
         })  
     },

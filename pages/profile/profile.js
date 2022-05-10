@@ -1,64 +1,88 @@
 // pages/profile/profile.js
+let app = getApp()
+
 Page({
-   
+    getItem: function(options) {
+        const page = this
+        const userId = app.globalData.user.id
+        console.log("getItem")
+        wx.request({
+            url: `${app.globalData.baseUrl}/users/${userId}/user_items`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const items = res.data;
+                // const item = res.data.item;
+                // const usernickname = res.data.usernickname;
+                page.setData({
+                    items: items
+                });
+                console.log(res.data)
+                // console.log(page.data.usernickname)
+            }
+        })  
+    },
+    
     /**
-     * 页面的初始数据
+     * Page initial data
      */
     data: {
-
+        
     },
 
+
     /**
-     * 生命周期函数--监听页面加载
+     * Lifecycle function--Called when page load
      */
     onLoad: function (options) {
-
+        const page = this
+        page.getItem()
     },
 
     /**
-     * 生命周期函数--监听页面初次渲染完成
+     * Lifecycle function--Called when page is initially rendered
      */
     onReady: function () {
 
     },
 
     /**
-     * 生命周期函数--监听页面显示
+     * Lifecycle function--Called when page show
      */
     onShow: function () {
 
     },
 
     /**
-     * 生命周期函数--监听页面隐藏
+     * Lifecycle function--Called when page hide
      */
     onHide: function () {
 
     },
 
     /**
-     * 生命周期函数--监听页面卸载
+     * Lifecycle function--Called when page unload
      */
     onUnload: function () {
 
     },
 
     /**
-     * 页面相关事件处理函数--监听用户下拉动作
+     * Page event handler function--Called when user drop down
      */
     onPullDownRefresh: function () {
 
     },
 
     /**
-     * 页面上拉触底事件的处理函数
+     * Called when page reach bottom
      */
     onReachBottom: function () {
 
     },
 
     /**
-     * 用户点击右上角分享
+     * Called when user click on the top right corner to share
      */
     onShareAppMessage: function () {
 

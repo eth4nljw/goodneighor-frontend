@@ -34,7 +34,7 @@ Page({
 
   // Bindtap for go to item new
    goToItemNew: function(e) {
-        wx.navigateTo({
+        wx.reLaunch({
           url: `/pages/itemsNew/itemsNew`
         })
    },

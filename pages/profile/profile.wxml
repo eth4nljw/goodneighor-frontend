@@ -12,3 +12,9 @@
 <image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
 <text calss="detail"> {{item.name}}</text>
 </view>
+
+<swiper indicator-dots="true" autoplay="true">
+<swiper-item>
+        <image src="/images/burger01_500x500.png" />
+      </swiper-item>
+    </swiper>

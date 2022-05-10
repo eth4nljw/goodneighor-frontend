@@ -45,7 +45,7 @@ Page({
                     wx.navigateTo({
                         url: `/pages/bids/bids`
                     })
-                }, 2000) // 等待后跳转页面
+                }, 3000) // 等待后跳转页面
             }
         })
 
@@ -126,7 +126,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        
     },
 
     /**

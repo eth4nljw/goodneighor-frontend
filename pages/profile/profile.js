@@ -12,13 +12,10 @@ Page({
             header: app.globalData.header,
             success(res) {
                 const items = res.data;
-                // const item = res.data.item;
-                // const usernickname = res.data.usernickname;
                 page.setData({
                     items: items
                 });
                 console.log(res.data)
-                // console.log(page.data.usernickname)
             }
         })  
     },

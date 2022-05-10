@@ -1,6 +1,6 @@
 <view class="container">
     <view class="item-image-area">
-        <image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
+        <image class="item-image-large" src="{{item.photo}}" lazy-load="true"></image>
     </view>
     <view class="item-details">
         <view class="item-details-row">

@@ -19,4 +19,3 @@
         <button class="" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
     </view>
 </view>
-

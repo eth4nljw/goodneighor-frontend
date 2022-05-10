@@ -1,4 +1,3 @@
-// pages/bidsNew/bidsNew.js
 let app = getApp()
 Page({
     bindSubmit(e) {
@@ -42,7 +41,7 @@ Page({
             success() {
                 //TODO redirect to item bids when done'
                 setTimeout(() => {
-                    wx.navigateTo({
+                    wx.reLaunch({
                         url: `/pages/bids/bids`
                     })
                 }, 2000) // 等待后跳转页面
@@ -75,7 +74,7 @@ Page({
         const page = this
         const itemId = options.id
         const userId = app.globalData.user.id
-        console.log(options)
+        
         wx.request({
             url: `${app.globalData.baseUrl}/items/${itemId}`,
             method: 'GET',
@@ -87,6 +86,7 @@ Page({
                     item: item,
                     usernickname: usernickname
                 });
+                console.log(res.data)
                 console.log(page.data.usernickname)
             }
         })

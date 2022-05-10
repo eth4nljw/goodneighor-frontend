@@ -1,15 +1,21 @@
 <!--pages/bids/bids.wxml-->
-
-<text>我的订单</text>
+<image class="title" src="/image/mybids.jpg"></image>
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
-    <text>{{bid.item.name}}</text>
-    <text>{{bid.item.category}}</text>
-    <text>{{bid.item.description}}</text>
+    <view>
+        <image scaleToFill  class="item-image-menu" src="{{bid.item.image_url}}" lazy-load="true"></image>
+    </view>
+    <view class="addmargin">
+        <view>
+            <text>{{bid.item.name}}</text>
+        </view>
+        <text>{{bid.item.description}}</text>
+    </view>
+    <view class="changeflex-direction">
     <block wx:if="{{bid.item.is_freebie}}">
-        <text>免费</text>
+        <text class="make-like-button2">免费</text>
     </block>
     <block wx:else>
-        <text>可兑换</text>
+        <text class="make-like-button2">可兑换</text>
     </block>
     <block wx:if="{{bid.item.status=='accepted'}}">
         <text>完成</text>
@@ -18,6 +24,8 @@
         <text>已拒绝</text>
     </block>
     <block else>
-        <text>待确定</text>
+        <text class="make-like-button3">待确定</text>
     </block>
+    </view> 
 </view>
+

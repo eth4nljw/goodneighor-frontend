@@ -72,9 +72,11 @@
     justify-content: center;
     align-items: center;
 }
+
 .picker{
     display: inline;
 }
+
 .picker-selection{
     display: inline;
     font-size: 50rpx;
@@ -82,5 +84,4 @@
 }
 
 .submit-button{
-
 }

@@ -12,16 +12,20 @@ Page({
             header: app.globalData.header,
             success(res) {
                 const items = res.data;
-                // const item = res.data.item;
-                // const usernickname = res.data.usernickname;
                 page.setData({
                     items: items
                 });
                 console.log(res.data)
-                // console.log(page.data.usernickname)
             }
         })  
     },
+
+    goToBidsItem: function(e) {
+        const itemId = e.currentTarget.dataset.id
+        wx.navigateTo({
+          url: `/pages/bidsItem/bidsItem?id=${itemId}`
+        })
+   },
     
     /**
      * Page initial data

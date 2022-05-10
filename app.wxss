@@ -15,6 +15,38 @@
   box-sizing: content-box;
 } 
 
+.make-like-button1{
+    
+    background-color:gold;
+    margin-right: 20rpx;
+    padding: 10rpx;
+    border-radius: 20rpx;
+    height: 50rpx;
+    width: 100rpx;
+    right: 20rpx;
+    margin-top: 20rpx;
+}
+
+.make-like-button2{
+    
+    padding: 10rpx;
+    background-color:lightskyblue;
+    border-radius: 20rpx;
+    height: 50rpx;
+    width: 100rpx;
+    margin-top: 20rpx;
+}
+
+.make-like-button3{
+    margin-right: 20rpx;
+    padding: 10rpx;
+    background-color:peachpuff;
+    border-radius: 20rpx;
+    height: 50rpx;
+    width: 100rpx;
+    right: 20rpx;
+}
+
 .banner{
   margin: 0;
   width:100%;

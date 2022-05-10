@@ -12,14 +12,11 @@ Page({
             header: app.globalData.header,
             success(res) {
                 const item = res.data.item;
-                const usernickname = res.data.usernickname;
                 page.setData({
                     item: item,
-                    usernickname: usernickname
                 });
-                console.log(res.data)
+                console.log(res.data.item)
                 console.log(page.data.usernickname)
-                console.log("fuck")
             }
         })  
     },

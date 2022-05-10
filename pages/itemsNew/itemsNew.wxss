@@ -1,53 +1,87 @@
-/* pages/itemsNew/itemsNew.wxss */
-.title{
-    display: flex;
-    width: 100%;
+.card-container{
+    background-color: white;
+    width: auto;
+
 }
 
-.container{
-    width: 360px;
-    padding: 8% 0 0;
+.banner{
+    padding: 50rpx 0 50rpx 0;
+    background-color: #FFC2B4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50rpx;
+}
+
+/* Add Item Card */
+.item-card-add{
+    letter-spacing: 5rpx;
+    border-radius: 5%;
+    margin: 25rpx 50rpx 200rpx 50rpx;
+    padding: 25rpx 0rpx 25rpx 0;
+    background-color: rgba(238, 223, 223, 0.32);
+    display: flex;
+    flex-direction: row;
+    color: #8A8888;
+}
+
+.item-card-add-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    padding: 25rpx 0;
+    align-items: center;
+    margin-bottom: 5rpx;
+}
+
+.form-input-field{
+    padding-left: 25rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+
+.img-holder{
+    border-radius: 20%;
+    background-color: rgba(196, 196, 196, 0.49);
+    width: 400rpx;
+    height: 400rpx;
+    display: flex;
+}
+
+.img-holder-button{
+    display: flex;
     margin: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.page-body{
-    position: relative;
-    z-index: 1;
-    background: #f1d8a0;
-    max-width: fit-content;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.weui-input-name{
-    text-align: right;
-}
-
-.picker-c{
-    text-align: right;
-}
-
-.weui-input-image{
-    margin: -130rpx 10rpx 180rpx 10rpx;
-    text-align: left;
-}
-
-.options{
-    text-align: left;
-}
-
-.page-section-title{
-    display: inline-block;
+    background-color: rgba(151, 151, 151, 1);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    width: 100rpx;
+    font-size: 50rpx;
 }
 
 
-.btn-area{
+.item-form{
+    margin: 100rpx 50rpx 0 50rpx;
     display: flex;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-textarea{
-    height: 50rpx;
+.picker{
+    display: inline;
+}
+
+.picker-selection{
+    display: inline;
+    font-size: 50rpx;
+    margin-left: 25rpx;
+}
+
+.submit-button{
 }

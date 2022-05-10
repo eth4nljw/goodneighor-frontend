@@ -53,12 +53,18 @@ Page({
         })
       },
 
-
+      freebieBindPickerChange: function(e){
+          console.log(e.detail.value);
+        this.setData({
+            is_freebie_state: e.detail.value
+        })
+      },
     data: {
         pickerHidden: true,
         chosen: '',
         itemCondition: ["全新", "二手", "损坏"],
-        itemCategory: ["运动", "电器", "家具", "时尚"]
+        itemCategory: ["运动", "电器", "家具", "时尚"],
+        is_freebie_state: true
       },
 
     /**

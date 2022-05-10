@@ -1,5 +1,23 @@
 // pages/bids/bids.js
+let app = getApp()
 Page({
+
+    getBids: function() {
+        const page = this
+        wx.request({
+          url: `${app.globalData.baseUrl}/users/${app.globalData.user.id}/bids`,
+          method: 'GET',
+          header: app.globalData.header,
+          success(res) {
+          const bids = res.data;
+          // console.log(bids);
+          page.setData({
+            bids: res.data,
+          });
+        },
+        
+      })
+      },
 
     /**
      * 页面的初始数据
@@ -12,6 +30,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        let page = this;
+     
+        page.getBids()
+
+       
 
     },
 
@@ -26,7 +49,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        console.log(this.data.bids)
     },
 
     /**

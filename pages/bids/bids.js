@@ -9,7 +9,7 @@ Page({
           method: 'GET',
           header: app.globalData.header,
           success(res) {
-          console.log('bids and items', res.data)
+             console.log('bids and items')
 
           // console.log(bids);
           page.setData({

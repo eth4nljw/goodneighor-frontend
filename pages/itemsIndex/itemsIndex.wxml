@@ -15,7 +15,7 @@
     </view>
 </view>
     <view class="grid">
-        <view wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
+        <view wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
             <view class="card">
                 <image class="card-image" src="/image/placeholder.png" lazy-load="true" mode="widthFix"></image>
                 <view class="card-text">

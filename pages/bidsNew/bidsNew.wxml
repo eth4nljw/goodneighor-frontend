@@ -13,7 +13,7 @@
         <view class="container-want">
             <text class="head">我想用来交换的物品：</text>
             <radio-group name="myItem">
-                <view class="main" wx:for="{{myItems}}" wx:for-item="myItem" data-id="{{myItem.id}}">
+                <view class="main" wx:for="{{myItems}}" wx:key="id" wx:for-item="myItem" data-id="{{myItem.id}}">
                     <label>
                         <radio value="{{myItem.id}}" checked />{{myItem.name}}
                     </label>

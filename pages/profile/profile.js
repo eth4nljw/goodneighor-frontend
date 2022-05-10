@@ -1,23 +1,24 @@
-// pages/itemsShow/itemsShow.js
+// pages/profile/profile.js
 let app = getApp()
 
 Page({
     getItem: function(options) {
         const page = this
-        const itemId = options.id
+        const userId = app.globalData.user.id
+        console.log("getItem")
         wx.request({
-            url: `${app.globalData.baseUrl}/items/${itemId}`,
+            url: `${app.globalData.baseUrl}/users/${userId}/user_items`,
             method: 'GET',
             header: app.globalData.header,
             success(res) {
-                const item = res.data.item;
-                const usernickname = res.data.usernickname;
+                const items = res.data;
+                // const item = res.data.item;
+                // const usernickname = res.data.usernickname;
                 page.setData({
-                    item: item,
-                    usernickname: usernickname
+                    items: items
                 });
                 console.log(res.data)
-                console.log(page.data.usernickname)
+                // console.log(page.data.usernickname)
             }
         })  
     },
@@ -26,22 +27,14 @@ Page({
      * Page initial data
      */
     data: {
-
+        
     },
-
-    goToBidsNew: function(e) {
-        const itemId = e.currentTarget.dataset.id
-        wx.reLaunch({
-          url: `/pages/bidsNew/bidsNew?id=${itemId}`
-        })
-   },
-
     /**
      * Lifecycle function--Called when page load
      */
     onLoad: function (options) {
         const page = this
-        page.getItem(options)
+        page.getItem()
     },
 
     /**

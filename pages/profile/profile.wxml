@@ -1,20 +1,19 @@
 <!--pages/profile/profile.wxml-->
-<text>我的宝贝</text>
-<view class="bar">
-<text>全部</text>
-<text>获得</text><text>100积分</text>
-<text>支出</text><text>2积分</text>
-<navigator url="#">我的订单</navigator>
-</view>
+<image class="title" src="/image/profile page.png"></image>
 
-<image class="title" src="/image/title.png"></image>
+
+<view class="main card " wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}">
 <view class="card">
-<image class="item-image-menu" src="{{item.image_url}}" lazy-load="true"></image>
-<text calss="detail"> {{item.name}}</text>
+<image class="item-image-menu" src="https://img2.baidu.com/it/u=3529982370,4071014204&fm=253&fmt=auto&app=120&f=JPEG?w=834&h=800" lazy-load="true"></image>
+<!-- <text calss="detail"> {{item.name}}</text> -->
 </view>
-
-<swiper indicator-dots="true" autoplay="true">
-<swiper-item>
-        <image src="/images/burger01_500x500.png" />
-      </swiper-item>
-    </swiper>
+<view class="card2">
+    <text class="card4">{{item.name}}</text>
+    <text class="card4">{{item.description}}</text>
+    <view class="card3">
+        <view class="make-like-button2">可兑换</view>
+        <view class="make-like-button3">See bids</view>
+    </view>
+    
+</view>
+</view>

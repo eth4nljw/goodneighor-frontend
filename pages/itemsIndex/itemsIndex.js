@@ -16,7 +16,10 @@ Page({
         items: items,
       });
     }
+    
   })
+
+
   },
   
     /** 
@@ -27,14 +30,14 @@ Page({
     // Bindtap for go to item show
    goToItemShow: function(e) {
         const itemId = e.currentTarget.dataset.id
-        wx.navigateTo({
+        wx.reLaunch({
           url: `/pages/itemsShow/itemsShow?id=${itemId}`
         })
    },
 
   // Bindtap for go to item new
    goToItemNew: function(e) {
-        wx.navigateTo({
+        wx.reLaunch({
           url: `/pages/itemsNew/itemsNew`
         })
    },
@@ -133,7 +136,7 @@ Page({
      * Page initial data
      */
     data: {
-        items: []
+        
     },
 
     /**
@@ -145,7 +148,12 @@ Page({
         wx.event.on("loginsuccess", page, page.getItems)
       } else {
         page.getItems()
-      }      
+      }    
+      console.log(page.data.items)  
+      setTimeout(()=>{
+        console.log(page.data.items)  
+      }, 2000)
+      
     },
 
     /**
@@ -158,7 +166,6 @@ Page({
      * Lifecycle function--Called when page show
      */
     onShow: function () {
-
     },
 
     /**

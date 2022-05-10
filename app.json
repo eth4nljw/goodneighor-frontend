@@ -18,7 +18,7 @@
   },
 
   "tabBar": {
-      "custom": true,
+    "custom": true,
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
@@ -32,8 +32,8 @@
         "pagePath": "pages/itemsNew/itemsNew",
         "text": "添加"
     },{
-        "pagePath": "pages/bidsNew/bidsNew",
-        "text": "新bid"
+        "pagePath": "pages/bids/bids",
+        "text": "bids"
     }]
   },
   

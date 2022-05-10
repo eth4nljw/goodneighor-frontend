@@ -17,10 +17,3 @@
     
 </view>
 </view>
-
-<!-- <view class="main" wx:for="{{items}}" wx:for-item="item" data-id="{{item.id}}">
-<view class="card">
-<image class="item-image-menu" src="https://img2.baidu.com/it/u=3529982370,4071014204&fm=253&fmt=auto&app=120&f=JPEG?w=834&h=800" lazy-load="true"></image>
-<text calss="detail"> {{item.name}}</text>
-</view>
-</view> -->

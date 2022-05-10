@@ -17,7 +17,7 @@ Component({
         iconPath: "/image/addb.png",
         selectedIconPath: "/image/add.png",
       },{
-        pagePath: "/pages/bidsNew/bidsNew",
+        pagePath: "/pages/bids/bids",
         iconPath: "/image/bidsb.png",
         selectedIconPath: "/image/bids.png",
       }]

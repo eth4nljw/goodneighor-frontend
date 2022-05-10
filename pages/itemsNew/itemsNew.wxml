@@ -1,5 +1,7 @@
 <image class="title" src="/image/title.png"></image>
 
+
+<view class="container">
   <view class="page-body">
     <form bindsubmit="itemSubmit" catchsubmit="bindSubmit">
 

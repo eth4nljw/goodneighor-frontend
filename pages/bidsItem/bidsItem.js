@@ -1,7 +1,6 @@
-// pages/bids/bids.js
+// pages/bidsItem/bidsItem.js
 let app = getApp()
 Page({
-
     getBids: function() {
         const page = this
         wx.request({
@@ -20,25 +19,32 @@ Page({
       })
       },
 
-      getItems: function() {
+
+    getItem: function(options) {
         const page = this
+        const itemId = options.id
+        console.log("the current item:", itemId)
         wx.request({
-          url: `${app.globalData.baseUrl}/items`,
-          method: 'GET',
-          header: app.globalData.header,
-          success(res) {
-          const items = res.data;
-          page.setData({
-            items: items,
-          });
-        }
-        
-      })
-    
-    
-      },
+            url: `${app.globalData.baseUrl}/items/${itemId}`,
+            method: 'GET',
+            header: app.globalData.header,
+            success(res) {
+                const item = res.data.item;
+                // const usernickname = res.data.usernickname;
+                page.setData({
+                    item: item,
+                   // usernickname: usernickname
+                });
+                console.log(res.data)
+            }
+        })  
+    },
 
+    selectBids: function(options) {
+        let selectedItemId = options.currentTarget.dataset.id
+        console.log(selectedItemId)
 
+    },
 
     /**
      * 页面的初始数据
@@ -51,18 +57,15 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let page = this;
-     
+        const page = this
+        page.getItem(options)
         page.getBids()
-        page.getItems()
+        // page.getItems()
 
       setTimeout(()=>{
         console.log(page.data.bids)  
         console.log(page.data.items)  
       }, 2000)
-
-       
-
     },
 
     /**

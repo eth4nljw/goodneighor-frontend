@@ -22,6 +22,13 @@ Page({
             }
         })  
     },
+
+    goToBidsItem: function(e) {
+        const itemId = e.currentTarget.dataset.id
+        wx.navigateTo({
+          url: `/pages/bidsItem/bidsItem?id=${itemId}`
+        })
+   },
     
     /**
      * Page initial data

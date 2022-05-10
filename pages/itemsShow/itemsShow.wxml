@@ -1,6 +1,6 @@
 <!-- TODO: change the below with show one item only code -->
 <view>
-<image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
+<image class="item-image-large" src="{{item.photo}}" lazy-load="true"></image>
 </view>
 
 

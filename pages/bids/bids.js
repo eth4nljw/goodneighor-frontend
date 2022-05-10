@@ -9,12 +9,12 @@ Page({
           method: 'GET',
           header: app.globalData.header,
           success(res) {
-             console.log('bids and items')
-
-          // console.log(bids);
-          page.setData({
-            bids: res.data,
-          });
+             console.log('bids and items！！')
+            console.log(res.data)
+            page.setData({
+                bids: res.data,
+            });
+            console.log(page.data.bids)
         },
         
       })
@@ -51,15 +51,7 @@ Page({
     onLoad: function (options) {
         let page = this;
      
-        page.getBids()
-        page.getItems()
-
-      setTimeout(()=>{
-        console.log(page.data.bids)  
-        console.log(page.data.items)  
-      }, 2000)
-
-       
+        page.getBids()  
 
     },
 

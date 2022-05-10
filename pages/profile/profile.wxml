@@ -1,11 +1,8 @@
-<!--pages/profile/profile.wxml-->
-<image class="title" src="/image/profile page.png"></image>
-
-
+<view class="head">您要交换的物品:</view>
 <view class="main card " wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
 <view class="card">
 <image class="item-image-menu" src="https://img2.baidu.com/it/u=3529982370,4071014204&fm=253&fmt=auto&app=120&f=JPEG?w=834&h=800" lazy-load="true"></image>
-<!-- <text calss="detail"> {{item.name}}</text> -->
+
 </view>
 <view class="card2">
     <text class="card4">{{item.name}}</text>
@@ -17,3 +14,18 @@
     
 </view>
 </view>
+
+<view class="page-section">
+    <view class="page-section-title">推荐展示样式</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="true"/>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>

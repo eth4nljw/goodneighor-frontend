@@ -1,10 +1,81 @@
 /**app.wxss**/
+
+/* Global Color Variables */
+
+/* Global Settings */
+
+/* Image Settings */
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+  /* padding: 200rpx 0; */
+  box-sizing: content-box;
 } 
+
+.banner{
+  margin: 0%;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+    /* Product Cards */
+    .grid { 
+      margin: 20rpx;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250rpx, 2fr));
+      grid-gap: 20rpx;
+      background-color: whitesmoke;
+      /* align-items: stretch; */
+      }
+  .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5%;
+      background-color: white;
+  
+      }
+  .card-image {
+      border-radius: 5%;
+      width: 100%;
+  
+  
+  }
+  
+  .card-text {
+
+      justify-content: space-between;
+      justify-content: stretch;
+      display: grid;
+      grid-template-columns: 4fr 2fr;
+      align-items: center;
+      padding: 20rpx 0rpx 10rpx 0rpx;
+      /* padding: 0 20px 20px 0; */
+  
+  }
+  .card-item-name{
+      font-size: 30rpx;
+      font-weight: bold;
+  }
+  .card-item-type {
+      font-size: 80%;
+      background-color: white;
+      padding: auto;
+      width: auto;
+      border-radius: 10%;
+      font-weight: bold;
+  }
+  .free {
+      color: #6CDB38;
+      border: 1px solid #6CDB38;
+  
+  }
+  .exchangable{
+      color: #B5C7E3;
+      border: 1px solid #B5C7E3;
+  }

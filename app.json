@@ -34,6 +34,9 @@
     },{
         "pagePath": "pages/bids/bids",
         "text": "bids"
+    },{
+        "pagePath": "pages/profile/profile",
+        "text": "个人"
     }]
   },
   

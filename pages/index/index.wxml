@@ -1,42 +1,36 @@
-<!--index.wxml-->
-
 <view class="container">
-<image class="cover" src="/image/logo.png"></image>
-<view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-    <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+    <view>
+        <image mode="widthFix" src="/image/logo.png"></image>
     </view>
-    <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-    <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-    <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-
-    </block>
-</view>
-<view class="list address">
-
-<input  placeholder="街道名称"/>
-<view class="addpadding">
-    <input  placeholder="小区单元,门牌号"/>
-</view>
-
-
-</view>
-<view class="usermotto">
-    <!-- <text class="user-motto">{{motto}}</text> -->
-</view>
-<view>
-<button class="foot" bindtap="goToItemsIndex">加入我们</button>
-</view>
-<view>
-    <checkbox class="checkbox"value="cb" checked="true"/>
-    <text>我同意此协议 </text>
-</view>
+    <view class="userinfo">
+        <block wx:if="{{canIUseOpenData}}">
+            <view class="userinfo-avatar">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <open-data type="userNickName"></open-data>
+        </block>
+        <block wx:elif="{{!hasUserInfo}}">
+            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+            <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+        </block>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text>{{userInfo.nickName}}</text>
+        </block>
+        <view class="address">
+            <text>爱情公寓</text>
+        </view>
+    </view>
+ 
+    <view>
+        <view class="footer-box margin-bottom">
+            <button class="button-main" bindtap="goToItemsIndex">加入好邻居</button>
+            <view class="agreement">
+                <checkbox class="checkbox"value="cb" checked="true"/>
+                <text>我同意此协议 </text>
+            </view>
+    </view>
+        </view>
+    
 </view>

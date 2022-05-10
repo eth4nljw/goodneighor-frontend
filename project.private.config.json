@@ -6,14 +6,23 @@
     },
     "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
         "miniprogram": {
             "list": [
                 {
                     "name": "",
-                    "pathName": "/pages/index/index",
+                    "pathName": "pages/index/index",
                     "query": "",
-                    "launchMode": "default",
-                    "scene": null
+                    "scene": null,
+                    "launchMode": "default"
                 },
                 {
                     "name": "Items index",

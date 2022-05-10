@@ -16,7 +16,10 @@ Page({
         items: items,
       });
     }
+    
   })
+
+
   },
   
     /** 
@@ -133,7 +136,7 @@ Page({
      * Page initial data
      */
     data: {
-        items: []
+        
     },
 
     /**
@@ -145,7 +148,12 @@ Page({
         wx.event.on("loginsuccess", page, page.getItems)
       } else {
         page.getItems()
-      }      
+      }    
+      console.log(page.data.items)  
+      setTimeout(()=>{
+        console.log(page.data.items)  
+      }, 2000)
+      
     },
 
     /**
@@ -158,7 +166,6 @@ Page({
      * Lifecycle function--Called when page show
      */
     onShow: function () {
-
     },
 
     /**

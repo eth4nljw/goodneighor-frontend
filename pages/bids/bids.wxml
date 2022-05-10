@@ -1,2 +1,6 @@
 <!--pages/bids/bids.wxml-->
 <text>pages/bids/bids.wxml</text>
+<text>My Bids Page</text>
+<view class="main" wx:for="{{bids}}" wx:for-item="bid">
+    <text>{{bids.note}}</text>
+</view>

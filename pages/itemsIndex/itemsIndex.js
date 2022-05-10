@@ -6,6 +6,7 @@ Page({
 
   getItems: function() {
     const page = this
+    this.setData({itemCategory: "全部"})
     wx.request({
       url: `${app.globalData.baseUrl}/items`,
       method: 'GET',
@@ -30,7 +31,7 @@ Page({
     // Bindtap for go to item show
    goToItemShow: function(e) {
         const itemId = e.currentTarget.dataset.id
-        wx.reLaunch({
+        wx.navigateTo({
           url: `/pages/itemsShow/itemsShow?id=${itemId}`
         })
    },
@@ -43,6 +44,9 @@ Page({
    },
    goToItemsStudy: function(e) {
        const page = this
+       this.setData({itemCategory: "学习"})
+       console.log(e.currentTarget)
+       console.log(e.target.data)
        wx.request({
            url: `${app.globalData.baseUrl}/items?cate=学习`,
            method: 'GET',
@@ -57,6 +61,7 @@ Page({
     },
     goToItemsSport: function(e) {
         const page = this
+        this.setData({itemCategory: "体育"})
         wx.request({
             url: `${app.globalData.baseUrl}/items?cate=体育`,
             method: 'GET',
@@ -71,6 +76,7 @@ Page({
      },
      goToItemsEA: function(e) {
         const page = this
+        this.setData({itemCategory: "电器"})
         wx.request({
             url: `${app.globalData.baseUrl}/items?cate=电器`,
             method: 'GET',
@@ -85,6 +91,7 @@ Page({
      },
      goToItemsHW: function(e) {
         const page = this
+        this.setData({itemCategory: "家具"})
         wx.request({
             url: `${app.globalData.baseUrl}/items?cate=家具`,
             method: 'GET',
@@ -99,6 +106,7 @@ Page({
      },
      goToItemsF: function(e) {
         const page = this
+        this.setData({itemCategory: "时尚"})
         wx.request({
             url: `${app.globalData.baseUrl}/items?cate=时尚`,
             method: 'GET',
@@ -130,13 +138,12 @@ Page({
    },
 
 
-
-
     /**
      * Page initial data
      */
     data: {
-        
+        items: [],
+        itemCategory: ""
     },
 
     /**

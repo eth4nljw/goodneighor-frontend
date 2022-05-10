@@ -3,10 +3,17 @@
 <image class="item-image-large" src="{{item.image_url}}" lazy-load="true"></image>
 </view>
 
+
+
+<view>
+<text>{{}}</text>
+</view>
+
+
+
 <view>
     <view class="flex-container">
-        <view class="make-like-button3">{{item.category}}</view>
-        <view class="addpadding">
+        <view class="other-container">
             <text>{{item.name}}</text>
         </view>
     </view>

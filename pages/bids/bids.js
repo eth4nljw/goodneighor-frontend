@@ -9,7 +9,8 @@ Page({
           method: 'GET',
           header: app.globalData.header,
           success(res) {
-          const bids = res.data;
+          console.log('bids and items', res.data)
+
           // console.log(bids);
           page.setData({
             bids: res.data,
@@ -17,6 +18,24 @@ Page({
         },
         
       })
+      },
+
+      getItems: function() {
+        const page = this
+        wx.request({
+          url: `${app.globalData.baseUrl}/items`,
+          method: 'GET',
+          header: app.globalData.header,
+          success(res) {
+          const items = res.data;
+          page.setData({
+            items: items,
+          });
+        }
+        
+      })
+    
+    
       },
 
     /**
@@ -33,6 +52,12 @@ Page({
         let page = this;
      
         page.getBids()
+        page.getItems()
+
+      setTimeout(()=>{
+        console.log(page.data.bids)  
+        console.log(page.data.items)  
+      }, 2000)
 
        
 
@@ -49,7 +74,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        console.log(this.data.bids)
+
     },
 
     /**

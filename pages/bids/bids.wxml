@@ -1,6 +1,23 @@
 <!--pages/bids/bids.wxml-->
-<text>pages/bids/bids.wxml</text>
-<text>My Bids Page</text>
-<view class="main" wx:for="{{bids}}" wx:for-item="bid">
-    <text>{{bids.note}}</text>
+
+<text>我的订单</text>
+<view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
+    <text>{{bid.item.name}}</text>
+    <text>{{bid.item.category}}</text>
+    <text>{{bid.item.description}}</text>
+    <block wx:if="{{bid.item.is_freebie}}">
+        <text>免费</text>
+    </block>
+    <block wx:else>
+        <text>可兑换</text>
+    </block>
+    <block wx:if="{{bid.item.status=='accepted'}}">
+        <text>完成</text>
+    </block>
+    <block wx:if="{{bid.item.status=='declined'}}">
+        <text>已拒绝</text>
+    </block>
+    <block else>
+        <text>待确定</text>
+    </block>
 </view>

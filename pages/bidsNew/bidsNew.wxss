@@ -7,17 +7,16 @@
 }
 
 .trading-item{
-    height:200rpx;
+    display: inline;
 }
 
 .wechat-user-image{
-    text-align: center;
-    align-items: center;
+    margin-left: 30%;
     width: 33%;
     height:200rpx;
     border-radius: 20%;
-    margin-top: -15rpx;
-    margin-left:60rpx ;
+    margin-top: 15rpx;
+
 }
 
 .item-name{
@@ -27,7 +26,7 @@
 }
 
 .detail{
-    float: left;
+    float: right;
 }
 
 
@@ -35,6 +34,7 @@
     background-color: whitesmoke;
     height: 180rpx;
     margin-bottom: 20rpx;
+    margin-top: 120rpx;
 }
 
 .container-msg{
@@ -51,9 +51,21 @@
 }
 
 .submit{
+    margin-top: -85rpx;
     text-align: center;
 }
 
 .btn-area{
     margin-left:175rpx;
+}
+
+.detail-line{
+    display: inline;
+    white-space: nowrap;
+}
+
+li{
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
 }

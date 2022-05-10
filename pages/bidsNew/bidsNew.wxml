@@ -1,23 +1,20 @@
-<!--pages/bidsNew/bidsNew.wxml-->
-
 <view>
     <view class="flex-container">
         <image src="{{item.image_url}}" class="wechat-user-image" />
-        <view class="other-container">
+        <view class="trading-item">
             <text>{{item.name}}</text>
-            <text>微信号</text>
             <view class="third-container">
-                <view class="make-like-button3">{{item.category}}</view>
-                <view class="make-like-button1">{{item.value}}积分</view>
-                <view class="make-like-button2">可兑换</view>
+            <ul class="detail-line">
+                <li><view class="make-like-button3">{{item.category}}</view></li>
+                <li><view class="make-like-button1">{{item.value}}积分</view></li>
+                <li><view class="make-like-button2">可兑换</view></li>
+            </ul>
             </view>
         </view>
     </view>
-    <view>
-        <text>{{item.description}}</text>
-    </view>
-
-    <view class="bids-avaliable" wx:if="{{item.status == 'avaliable'}}">
+ 
+        <text class="detail">{{item.description}}</text>
+    <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
 
         <view>此宝贝可以发起请求</view>
         <view>请选择你的物品</view>

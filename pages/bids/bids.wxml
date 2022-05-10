@@ -6,12 +6,12 @@
     </view>
     <view class="addmargin">
         <view>
-            <text>{{bid.item.name}}</text>
+            <text>{{bid.owner_item.name}}</text>
         </view>
-        <text>{{bid.item.description}}</text>
+        <text>{{bid.owner_item.description}}</text>
     </view>
     <view class="changeflex-direction">
-    <block wx:if="{{bid.item.is_freebie}}">
+    <block wx:if="{{bid.owner_item.is_freebie}}">
         <text class="make-like-button2">免费</text>
     </block>
     <block wx:else>

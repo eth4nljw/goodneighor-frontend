@@ -41,7 +41,7 @@ Page({
             success() {
                 //TODO redirect to item bids when done'
                 setTimeout(() => {
-                    wx.navigateTo({
+                    wx.reLaunch({
                         url: `/pages/bids/bids`
                     })
                 }, 2000) // 等待后跳转页面

@@ -7,6 +7,7 @@
       "pages/itemsNew/itemsNew",
       "pages/bidsNew/bidsNew",
       "pages/bids/bids",
+      "pages/bidsItem/bidsItem",
       "pages/profile/profile"
   ],
 

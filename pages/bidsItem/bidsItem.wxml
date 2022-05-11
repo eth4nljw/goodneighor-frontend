@@ -2,10 +2,10 @@
 <view class="item-banner">
     <view class="item-card">
     <view class="detail">
-        <text style="font-size: larger;">{{item.name}}</text>
+        <text style="font-size: larger;padding-bottom: 15rpx;">{{item.name}}</text>
         <text>{{item.description}}</text>
     </view>
-        <image class="card-image" src="{{bid.owner_item.photo}}" lazy-load="true" mode="widthFix"></image>
+        <image class="card-image" src="{{item.photo}}" lazy-load="true" mode="widthFix"></image>
     </view>
 </view>
 
@@ -19,8 +19,8 @@
             <block wx:if="{{bid.bid.owner_item_id == item.id}}">
                 <view class="detail">
                 <text>ID:{{bid.taker_item.id}}</text>
-                <text>商品名称{{bid.taker_item.name}}</text>
-                <text>Bids id:{{bid.bid.id}}</text>
+                <text>商品名称:{{bid.taker_item.name}}</text>
+                <text>Bids ID:{{bid.bid.id}}</text>
             </view>
                 <image class="card-image" src="{{bid.taker_item.photo}}" lazy-load="true" mode="widthFix"></image>
                 <button class="submit" bindtap="selectBids" data-id="{{bid.bid.id}}">选择</button>

@@ -4,7 +4,6 @@ Page({
     bindSubmit(e) {
         let name = e.detail.value.name;
         let category = this.data.itemCategory[e.detail.value.category];
-        let image_url = e.detail.value.image_url;
         let is_freebie = e.detail.value.is_freebie;
         let value = e.detail.value.value;
         let request = e.detail.value.request;
@@ -13,7 +12,6 @@ Page({
         let item = {
             name: name,
             category: category,
-            image_url: image_url,
             is_freebie: is_freebie,
             value: value,
             request: request,
@@ -27,16 +25,57 @@ Page({
             method: 'POST',
             header: app.globalData.header,
             data: item,
-            success() {
+            success(res) {
+                console.log('INSIDE UPLOAD.JS', res.data.id)
+                const itemId = res.data.id
                 //TODO redirect to item bids when done'
-                wx.reLaunch({
-                    url: '/pages/itemsIndex/itemsIndex'
-                })
+                wx.uploadFile({
+                    url: `${app.globalData.baseUrl}/items/${itemId}/upload`,
+                    filePath: page.data.imgSrc,
+                    name: 'file',
+                    header: app.globalData.header,
+                    success(res) {
+                        wx.reLaunch({
+                            url: `/pages/bidsItem/bidsItem?id=${itemId}`,
+                          })
+                    },
+                    fail(err) {
+                      console
+                      console.log(err)
+                    }
+                  })
             }
         })  
         
     },
     
+    chooseImg() {
+        const page = this;
+        // console.log('page', page);
+        wx.chooseMedia({
+          count: 1,
+          mediaType: ['image'],
+          sourceType: ['album', 'camera'],
+          maxDuration: 30,
+          camera: 'back',
+          success(res) {
+            // console.log('res', res)
+            const imgInfo = res.tempFiles[0];
+            console.log(imgInfo);
+            page.setData ({
+              imgSrc: res.tempFiles[0].tempFilePath,
+            })
+            console.log(page.data.imgSrc);
+            wx.showToast({
+              title: "uploaded",
+              icon: 'success',
+              duration: 1000
+          });
+          }
+        })
+    },
+
+
     /**
      * Page initial data
      */
@@ -64,7 +103,8 @@ Page({
         chosen: '',
         itemCondition: ["全新", "二手", "损坏"],
         itemCategory: ["运动", "电器", "家具", "时尚"],
-        is_freebie_state: true
+        is_freebie_state: true,
+        imgSrc: '/image/photo.png'
       },
 
     /**

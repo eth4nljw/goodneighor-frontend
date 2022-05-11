@@ -1,50 +1,54 @@
 <view class="card-container">
     <view class="banner"><text>添加我的宝贝</text></view>
     <view class="item-card-add">
-        <view class="item-card-add-column">
-            <view class="img-holder">
-                <view class="img-holder-button"><text>+</text></view>
-            </view>
-            <view class="item-form">
-                <form class="" bindsubmit="itemSubmit" catchsubmit="bindSubmit">
-
-                    <view class="form-row" id="name">
-                        <text class="form-label" >产品名称</text>
-                        <input class="form-input-field" name="name"/>
+        
+        <view class="item-form">
+            <form class="" bindsubmit="itemSubmit" catchsubmit="bindSubmit">
+                <view class="img-holder-holder">
+                    <view class="img-holder">
+                        <view class="" id="image">
+                            <view wx:if="{{imgSrc == '/image/photo.png'}}" class="addImg" bindtap="chooseImg" name="item_image">
+                                <image class="upload" src="{{imgSrc}}"></image>
+                                <view>上传图片</view>
+                            </view>
+                            <view wx:else class="addImg" bindtap="chooseImg" name="item_image">
+                                <image mode="aspectFill" class="uploadImg" src="{{imgSrc}}"></image>
+                            </view>
+                        </view>
                     </view>
+                </view>
+                <view class="form-row" id="name">
+                    <text class="form-label" >产品名称</text>
+                    <input class="form-input-field" name="name"/>
+                </view>
 
-                    <view class="form-row" id="category">
-                        <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
-                            <view class="picker">宝贝类别:</view>
-                            <view class="picker-selection">{{itemCategory[category_index]}}</view>
-                        </picker>
-                    </view>
+                <view class="form-row" id="category">
+                    <picker bindchange="categoryBindPickerChange" value="{{category_index}}" range="{{itemCategory}}" name="category">
+                        <view class="picker">宝贝类别:</view>
+                        <view class="picker-selection">{{itemCategory[category_index]}}</view>
+                    </picker>
+                </view>
+                
+                <view class="form-row">
+                    <view>无偿</view> 
+                    <switch bindchange="freebieBindPickerChange" name="is_freebie" checked="true"/>
+                    <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
+                        <view class="picker">宝贝质量:</view>
+                        <view class="picker-selection">{{itemCondition[condition_index]}}</view>
+                    </picker>
+                </view>
 
-                    <!-- <view class="form-row" id="image-url">
-                        <input class="form-input-field" name="image_url" placeholder="上传图片" />
-                    </view> -->
+                <view wx:if="{{is_freebie_state==false}}" class="form-row" id="request">
+                    <input class="form-input-field" name="request" placeholder="通过交换想获得什么?"/>
+                </view>
 
-                    <view class="form-row">
-                        <view>无偿</view> 
-                        <switch bindchange="freebieBindPickerChange" name="is_freebie" checked="true"/>
-                        <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
-                            <view class="picker">宝贝质量:</view>
-                            <view class="picker-selection">{{itemCondition[condition_index]}}</view>
-                        </picker>
-                    </view>
-
-                    <view wx:if="{{is_freebie_state==false}}" id="request">
-                        <input class="form-input-field" name="request" placeholder="通过交换想获得什么?"/>
-                    </view>
-
-                    <view id="description">
-                        <textarea placeholder="宝贝详情" name="description" />
-                    </view>
-                    <view class="submit-button">
-                        <button class="submit" type="primary" formType="submit">提交我的宝贝</button>
-                    </view>
-                </form>                    
-            </view>
+                <view class="form-row" id="description">
+                    <textarea placeholder="宝贝详情" name="description" class="form-input-field" />
+                </view>
+                <view class="submit-button">
+                    <button type="primary" formType="submit">提交我的宝贝</button>
+                </view>
+            </form>                    
         </view>
     </view>
 </view>

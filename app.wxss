@@ -48,11 +48,11 @@
 }
 
 .banner{
-  margin: 0;
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  overflow: hidden;
+    padding: 50rpx 0;
+    background-color: #FFC2B4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50rpx;
 }
 
     /* Product Cards */

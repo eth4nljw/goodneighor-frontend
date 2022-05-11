@@ -53,6 +53,7 @@
     flex-direction: row;
     justify-content: left;
     margin-bottom: 25rpx;
+    
 }
 
 .change-background-color{
@@ -66,4 +67,8 @@
 
 .item-request-detail{
     margin: 5rpx;
+    color: darkgray;
+}
+.item-details-color{
+    color: darkgray;
 }

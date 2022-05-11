@@ -1,6 +1,6 @@
 <view>
     <view class="flex-container">
-        <image src="{{item.image_url}}" class="wechat-user-image" />
+        <image src="{{item.photo}}" class="wechat-user-image" />
         <view class="trading-item">
             <text>{{item.name}}</text>
             <view class="third-container">

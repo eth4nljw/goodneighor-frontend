@@ -84,6 +84,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/bids/bids",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

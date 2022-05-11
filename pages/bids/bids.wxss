@@ -7,12 +7,11 @@
 
 .item-image-menu{
     display: flex;
-    overflow: hidden;
-    width: 260rpx;
+    width: 250rpx;
     height: 260rpx;
-    border-radius: 10%;
+    border-radius: 8%;
     box-shadow: 5px; 
-    margin: 10rpx;
+    margin: 20rpx;
 }
 
 .flex-container {
@@ -27,6 +26,7 @@
     width: 130rpx;
     margin-top: 20rpx;
     margin-left: 35rpx;
+    text-align: center;
 }
 
 .make-like-button3{
@@ -37,6 +37,7 @@
     width: 130rpx;
     margin-top: 20rpx;
     margin-left: 35rpx;
+    text-align: center;
 }
 
 .godown{
@@ -46,6 +47,11 @@
 .bids-card{
     display: flex;
     justify-content: space-between;
+    margin: 5rpx;
+    background-color: whitesmoke;
+    border-radius: 8%;
+
+    
 }
 
 .make-like-button4{
@@ -56,6 +62,7 @@
     width: 130rpx;
     margin-top: 20rpx;
     margin-left: 35rpx;
+    text-align: center;
 }
 
 .addmargin{
@@ -68,3 +75,8 @@
     flex-direction: column;
 }
 
+.horizontal-card {
+    display: flex;
+    width: 800rpx;
+    justify-content: space-between;
+}

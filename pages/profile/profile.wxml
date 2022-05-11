@@ -1,5 +1,6 @@
+<view><image class="banner" mode="widthFix" src="/image/profile.png"></image></view>
 <view class="head">您要交换的物品:</view>
-<view class="main card " wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
+<view class="main card" wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
   <view class="card">
     <image class="item-image-menu" src="https://img2.baidu.com/it/u=3529982370,4071014204&fm=253&fmt=auto&app=120&f=JPEG?w=834&h=800" lazy-load="true"></image>
 
@@ -15,12 +16,12 @@
       <block wx:else>
         <text>已兑换</text>
       </block>
-    </view>data-id="{{item.id}}
+    </view>
 
   </view>
 </view>
 
-<view class="page-section">
+<!-- <view class="page-section">
   <view class="page-section-title">推荐展示样式</view>
   <view class="weui-cells weui-cells_after-title">
     <radio-group bindchange="radioChange">
@@ -33,4 +34,4 @@
       </label>
     </radio-group>
   </view>
-</view>
+</view> -->

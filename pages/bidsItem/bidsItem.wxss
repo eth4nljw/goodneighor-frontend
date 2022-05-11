@@ -1,1 +1,38 @@
 /* pages/bidsItem/bidsItem.wxss */
+.item-banner{
+    background-color: pink;
+}
+
+.card-image{
+    display: flex;
+    width:260rpx;
+    height: 260rpx;
+    border-radius: 5%;
+    box-shadow: 5px; 
+    margin: 25rpx;
+}
+
+.detail{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    background-color:whitesmoke;
+    margin: 20rpx;
+    width: 300rpx;
+    border-radius: 30rpx;
+    height: 200rpx;
+}
+
+.detail text{
+    padding-left: 20rpx;
+}
+
+.bids-card{
+    background-color: whitesmoke;
+    margin: 10rpx;
+}
+
+.submit{
+    background-color:orange;
+    left: 300rpx;
+}

@@ -13,6 +13,7 @@ Page({
             console.log(res.data)
             page.setData({
                 bids: res.data,
+                user_id: app.globalData.user.id,
             });
             console.log(page.data.bids)
         },
@@ -30,6 +31,7 @@ Page({
           const items = res.data;
           page.setData({
             items: items,
+            user: app.globalData.user
           });
         }
         
@@ -44,7 +46,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      user: app.globalData.user
     },
 
     /**
@@ -52,9 +54,14 @@ Page({
      */
     onLoad: function (options) {
         let page = this;
-     
+      
         page.getBids()  
         page.getItems()
+        setTimeout(() => {
+          console.log(page.data.user.id);
+    
+      }, 2000) // 等待后跳转页面
+        
     },
 
     /**

@@ -26,7 +26,7 @@
     padding: 20rpx;
     background-color:whitesmoke;
     margin: 10rpx;
-    width: 370rpx;
+    width: 390rpx;
     border-radius: 30rpx;
     height: 260rpx;
 }

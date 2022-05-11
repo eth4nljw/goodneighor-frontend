@@ -1,7 +1,7 @@
 <view>
     <view class="flex-container">
         <image src="{{item.photo}}" class="wechat-user-image" />
-        <view class="trading-item">
+        <!-- <view class="trading-item">
             <text>{{item.name}}</text>
             <view class="third-container">
             <ul class="detail-line">
@@ -10,14 +10,20 @@
                 <li><view class="make-like-button2">可兑换</view></li>
             </ul>
             </view>
+        </view> -->
+        <view class="flex-container-column">
+            <text>我想要这个</text>
+            <text>{{item.name}}</text>
+            <view class="make-like-button2">可兑换</view>
         </view>
     </view>
  
-        <text class="detail">{{item.description}}</text>
+        <!-- <text class="detail">{{item.description}}</text> -->
     <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
 
-        <view>此宝贝可以发起请求</view>
-        <view>请选择你的物品</view>
+        <!-- <view>此宝贝可以发起请求</view> -->
+        <view class="text-center">你的下面这些宝贝可交换上面的物品</view>
+        <view class="text-center">请选择你的物品</view>
 
 
 

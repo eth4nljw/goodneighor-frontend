@@ -54,7 +54,7 @@ Page({
         let page = this;
      
         page.getBids()  
-
+        page.getItems()
     },
 
     /**

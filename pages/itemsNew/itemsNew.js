@@ -5,19 +5,27 @@ Page({
         let name = e.detail.value.name;
         let category = this.data.itemCategory[e.detail.value.category];
         let is_freebie = e.detail.value.is_freebie;
-        let value = e.detail.value.value;
         let request = e.detail.value.request;
         let condition = this.data.itemCondition[e.detail.value.condition];
         let description = e.detail.value.description;
+        if (!name || this.data.category_index == 0 || !condition || !description || this.data.imgSrc == '/image/photo.png'
+        ){
+          wx.showToast({
+            title: '请输入准确的信息',
+            icon: 'error',
+            duration: 2000
+          })
+          return
+        }
         let item = {
             name: name,
             category: category,
             is_freebie: is_freebie,
-            value: value,
             request: request,
             condition: condition,
             description:  description
         }
+        
 
         const page = this
         wx.request({
@@ -36,7 +44,7 @@ Page({
                     header: app.globalData.header,
                     success(res) {
                         wx.reLaunch({
-                            url: `/pages/bidsItem/bidsItem?id=${itemId}`,
+                            url: `/pages/profile/profile`,
                           })
                     },
                     fail(err) {
@@ -86,6 +94,13 @@ Page({
         })
       },
 
+      bindBack: function(){
+        console.log('pressed')
+        wx.switchTab({
+          url: `/pages/itemsIndex/itemsIndex`
+        })
+      },
+
       conditionBindPickerChange: function(e) {
         this.setData({
             condition_index: e.detail.value
@@ -101,10 +116,12 @@ Page({
     data: {
         pickerHidden: true,
         chosen: '',
-        itemCondition: ["全新", "二手", "损坏"],
-        itemCategory: ["运动", "电器", "家具", "时尚"],
+        itemCondition: ["选择", "全新", "二手", "损坏"],
+        itemCategory: ["选择", "运动", "电器", "家具", "时尚"],
         is_freebie_state: true,
-        imgSrc: '/image/photo.png'
+        imgSrc: '/image/photo.png',
+        category_index: 0,
+        condition_index: 0
       },
 
     /**

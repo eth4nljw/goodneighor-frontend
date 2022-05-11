@@ -1,7 +1,9 @@
 <view class="card-container">
     <view class="page-banner"><text>添加我的宝贝</text></view>
     <view class="item-card-add">
-        
+        <view class="button-bg" bindtap="bindBack">
+            <text class="button-back"></text>  
+        </view>
         <view class="item-form">
             <form class="" bindsubmit="itemSubmit" catchsubmit="bindSubmit">
                 <view class="img-holder-holder">
@@ -19,7 +21,7 @@
                 </view>
                 <view class="form-row" id="name">
                     <text class="form-label" >产品名称</text>
-                    <input class="form-input-field" name="name"/>
+                    <input class="form-input-field" name="name" />
                 </view>
 
                 <view class="form-row" id="category">

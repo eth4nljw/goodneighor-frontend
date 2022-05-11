@@ -126,3 +126,39 @@
       color: #B5C7E3;
       border: 1px solid #B5C7E3;
   }
+
+
+  .button-bg{
+    position: relative;
+    margin-left: 80%;
+    background-color: lightgray;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+/* Close Button */
+.button-back {
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-back:before, .button-back:after {
+    position: absolute;
+    content: ' ';
+    height: 18px;
+    width: 2px;
+    background-color: #333;
+  }
+  .button-back:before {
+    transform: rotate(45deg);
+  }
+  .button-back:after {
+    transform: rotate(-45deg);
+  }

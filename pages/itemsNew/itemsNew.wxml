@@ -1,5 +1,5 @@
 <view class="card-container">
-    <view class="banner"><text>添加我的宝贝</text></view>
+    <view class="page-banner"><text>添加我的宝贝</text></view>
     <view class="item-card-add">
         
         <view class="item-form">

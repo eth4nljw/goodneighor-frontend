@@ -11,7 +11,7 @@ Page({
         if (!name || this.data.category_index == 0 || !condition || !description || this.data.imgSrc == '/image/photo.png'
         ){
           wx.showToast({
-            title: '请输入准确的信息',
+            title: '输入信息不完整',
             icon: 'error',
             duration: 2000
           })

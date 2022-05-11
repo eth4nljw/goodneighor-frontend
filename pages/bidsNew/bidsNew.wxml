@@ -1,6 +1,45 @@
+<!-- <view class="">
+    <view class="selected-item-section">
+        <text>You are trading this item:</text>
+        <view class="horizontal-card">
+            <image class="horizontal-card-image" src="{{item.photo}}"></image>
+            <view class="horizontal-card-content">
+                <view class="horizontal-card-content-row">
+                    <image class="information-box"></image>
+                    <text>You're bidding for:</text>
+                </view>
+                <view class="horizontal-card-content-row">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="horizontal-card-content-row">
+                    <view wx:if="{{item.is_freebie}}">freebie</view>
+                    <view wx:if="{{!item.is_freebie}}">Exchangable</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <view>
     <view class="flex-container">
-        <image src="{{item.photo}}" class="wechat-user-image" />
+        <image src="{{item.photo}}" class="horizontal-card-image" />
         <!-- <view class="trading-item">
             <text>{{item.name}}</text>
             <view class="third-container">

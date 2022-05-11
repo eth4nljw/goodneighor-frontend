@@ -10,7 +10,7 @@
     display: inline;
 }
 
-.wechat-user-image{
+.horizontal-card-image{
     /* margin-left: 30%; */
     width: 33%;
     height:200rpx;
@@ -31,7 +31,6 @@
 
 
 .container-want{
-    background-color: whitesmoke;
     height: 180rpx;
     margin-bottom: 20rpx;
     margin-top: 120rpx;
@@ -80,3 +79,7 @@
 .text-center{
     text-align: center;
 }
+
+
+
+/* copied from bidsindex */

@@ -10,9 +10,9 @@
         <view class="horizontal-card">
             <view class="addmargin">
                 <view>
-                    <text>{{bid.owner_item.name}}</text>
+                    <text class="text-bigger">{{bid.owner_item.name}}</text>
                 </view>
-                <text>{{bid.owner_item.description}}</text>
+                <text class="discription-color">{{bid.owner_item.description}}</text>
             </view>
             <view>
                 <view class="changeflex-direction">

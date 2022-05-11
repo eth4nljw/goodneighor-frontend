@@ -80,3 +80,12 @@
     width: 800rpx;
     justify-content: space-between;
 }
+
+.discription-color{
+    color: darkgray;
+}
+
+.text-bigger{
+    font-size: 45rpx;
+    margin-top: 20rpx;
+}

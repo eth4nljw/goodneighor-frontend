@@ -1,12 +1,14 @@
 <!--pages/bids/bids.wxml-->
 <image class="title" src="/image/mybids.jpg"></image>
+<text>{{app.globalData.user.id}}</text>
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
-    <view>
-        <image scaleToFill  class="item-image-menu" src="{{bid.owner_item.photo}}" lazy-load="true"></image>
-    </view>
 
-    <view class="horizontal-card">
-        <view class="addmargin ">
+    <block wx:if="{{user.id == bid.taker_item.user_id}}">
+        <view>
+            <image scaleToFill class="item-image-menu" src="{{bid.owner_item.photo}}" lazy-load="true"></image>
+        </view>
+            <view class="horizontal-card">
+        <view class="addmargin">
             <view>
                 <text>{{bid.owner_item.name}}</text>
             </view>
@@ -34,4 +36,3 @@
     </view>
     
 </view>
-

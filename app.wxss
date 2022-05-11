@@ -47,12 +47,26 @@
     right: 20rpx;
 }
 
-.banner{
-  margin: 0;
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  overflow: hidden;
+.home-banner{
+    margin: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: #FFC2B4;
+}
+
+.page-banner{
+    margin: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 50rpx 0 50rpx 0;
+    background-color: #FFC2B4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50rpx;
 }
 
     /* Product Cards */
@@ -101,6 +115,7 @@
       width: auto;
       border-radius: 10%;
       font-weight: bold;
+      text-align: center;
   }
   .free {
       color: #6CDB38;

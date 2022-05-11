@@ -1,5 +1,4 @@
 <!--pages/bidsItem/bidsItem.wxml-->
-
 <view class="item-banner">
     <view class="item-card">
         <text>{{item.id}}</text>
@@ -9,14 +8,18 @@
 </view>
 
 <view class="bids-title">
-<text>Bids for {{item.name}}</text>
+    <text>Bids for {{item.name}}</text>
 </view>
 
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
-    <block wx:if="{{bid.bid.owner_item_id == item.id}}">
-        <text>{{bid.taker_item.id}}</text>
-        <text>{{bid.taker_item.name}}</text>
-        <text>Bids id:{{bid.bid.id}}</text>
-        <button bindtap="selectBids" data-id="{{bid.taker_item.id}}">选择</button>
+    <block wx:if="{{bid.owner_item.status == 'available'}}">
+        <block wx:if="{{bid.bid.status == 'pending'}}">
+            <block wx:if="{{bid.bid.owner_item_id == item.id}}">
+                <text>{{bid.taker_item.id}}</text>
+                <text>{{bid.taker_item.name}}</text>
+                <text>Bids id:{{bid.bid.id}}</text>
+                <button bindtap="selectBids" data-id="{{bid.bid.id}}">选择</button>
+            </block>
+        </block>
     </block>
 </view>

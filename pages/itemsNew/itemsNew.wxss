@@ -1,76 +1,73 @@
 .card-container{
     background-color: white;
-    width: auto;
-
 }
 
-.banner{
-    padding: 50rpx 0 50rpx 0;
-    background-color: #FFC2B4;
-    text-align: center;
-    font-weight: bold;
-    font-size: 50rpx;
-}
+
 
 /* Add Item Card */
 .item-card-add{
     letter-spacing: 5rpx;
     border-radius: 5%;
     margin: 25rpx 50rpx 200rpx 50rpx;
-    padding: 25rpx 0rpx 25rpx 0;
+    padding: 25rpx;
     background-color: rgba(238, 223, 223, 0.32);
     display: flex;
-    flex-direction: row;
     color: #8A8888;
-}
-
-.item-card-add-column{
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
 
 .form-row{
     display: flex;
     flex-direction: row;
-    padding: 25rpx 0;
     align-items: center;
-    margin-bottom: 5rpx;
+    margin-bottom: 25rpx;
 }
 
 .form-input-field{
-    padding-left: 25rpx;
+    padding: 15rpx 25rpx;
     background-color: white;
     border-radius: 20rpx;
+    width: 100%;
 }
 
+.img-holder-holder{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .img-holder{
     border-radius: 20%;
     background-color: rgba(196, 196, 196, 0.49);
-    width: 400rpx;
-    height: 400rpx;
+    width: 380rpx;
+    height: 380rpx;
     display: flex;
+    justify-content: center;
+    margin-bottom: 50rpx;
 }
 
-.img-holder-button{
-    display: flex;
-    margin: auto;
-    background-color: rgba(151, 151, 151, 1);
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 100rpx;
-    width: 100rpx;
-    font-size: 50rpx;
+.addImg {
+    height: 380rpx !important;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap:20rpx;
+    box-sizing: border-box;
+  }
+
+.upload {
+    width: 110rpx; height: 100rpx;
 }
+
+.uploadImg {
+    border-radius: 20%;
+    width: 380rpx;
+    height: 380rpx;
+  }
 
 
 .item-form{
-    margin: 100rpx 50rpx 0 50rpx;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .picker{
@@ -81,7 +78,4 @@
     display: inline;
     font-size: 50rpx;
     margin-left: 25rpx;
-}
-
-.submit-button{
 }

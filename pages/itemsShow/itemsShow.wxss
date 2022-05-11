@@ -6,25 +6,37 @@
 }
 .item-category{
     background-color: #FEE8E8;
+    width: 100rpx;
+    border-radius: 15%;
+    text-align: center;
 }
 
 .item-freebie{
     background-color: #6CDB38;
+    width: 100rpx;
+    border-radius: 15%;
+    text-align: center;
 }
 
 .item-exchange{
     background-color: #B5C7E3;
+    width: 100rpx;
+    border-radius: 15%;
+    text-align: center;
 }
 
 .item-request{
     background-color: #F5AA40;
+    width: 100rpx;
+    border-radius: 15%;
+    text-align: center;
 }
 
 /* item image area */
 .item-image-large{
-    height: 700rpx;
+    height: 650rpx;
     width: 750rpx;
-    border-radius: 0% 0% 20% 20%;
+    border-radius: 0% 0% 18% 18%;
 }
 
 /* item details area */
@@ -41,4 +53,17 @@
     flex-direction: row;
     justify-content: left;
     margin-bottom: 25rpx;
+}
+
+.change-background-color{
+    background-color: white;
+    margin: 80rpx;
+}
+
+.item-name{
+    margin: 5rpx;
+}
+
+.item-request-detail{
+    margin: 5rpx;
 }

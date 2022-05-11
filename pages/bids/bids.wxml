@@ -2,17 +2,20 @@
 <image class="title" src="/image/mybids.jpg"></image>
 <text>{{app.globalData.user.id}}</text>
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
+
     <block wx:if="{{user.id == bid.taker_item.user_id}}">
         <view>
             <image scaleToFill class="item-image-menu" src="{{bid.owner_item.photo}}" lazy-load="true"></image>
         </view>
+            <view class="horizontal-card">
         <view class="addmargin">
             <view>
                 <text>{{bid.owner_item.name}}</text>
             </view>
             <text>{{bid.owner_item.description}}</text>
         </view>
-        <view class="changeflex-direction">
+        <view>
+            <view class="changeflex-direction">
             <block wx:if="{{bid.owner_item.is_freebie}}">
                 <text class="make-like-button2">免费</text>
             </block>
@@ -28,6 +31,8 @@
             <block else>
                 <text class="make-like-button3">待确定</text>
             </block>
-        </view>
-    </block>
+            </view>
+        </view> 
+    </view>
+    
 </view>

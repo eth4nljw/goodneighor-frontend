@@ -8,19 +8,19 @@
 
 .item-image-menu{
     display: flex;
-    overflow: hidden;
-    width: 260rpx;
+    width:260rpx;
     height: 260rpx;
-    padding: 30rpx;
-    border-radius: 200rpx;
+    border-radius: 5%;
     box-shadow: 5px; 
+    margin: 20rpx;
 }
 
 .card{
-    display: flex;
+    display: inline-block;
 }
 
 .card2{
+    float: right;
     display: flex;
     flex-direction: column;
     padding: 20rpx;
@@ -42,6 +42,7 @@
 
 .card3{
     display: flex;
+
     margin-top: 100rpx;
 }
 
@@ -57,4 +58,9 @@
 
 .card4{
     margin-top: 2rpx;
+}
+
+
+.page-section{
+    display: inline;
 }

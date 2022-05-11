@@ -12,6 +12,11 @@ Page({
       url: `/pages/itemsIndex/itemsIndex`
     })
 },
+// goToItemsIndex:function(event){
+//     wx.switchTab({
+//       url: '../index/index',
+//     })
+// },
 
 
   data: {

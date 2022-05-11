@@ -27,16 +27,13 @@
       "pagePath": "pages/itemsIndex/itemsIndex",
       "text": "主页"
       },{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/profile/profile",
       "text": "测试"
     },{
         "pagePath": "pages/itemsNew/itemsNew",
-        "text": "添加"
-    },{
-        "pagePath": "pages/bids/bids",
         "text": "bids"
     },{
-        "pagePath": "pages/profile/profile",
+        "pagePath": "pages/bids/bids",
         "text": "个人"
     }]
   },

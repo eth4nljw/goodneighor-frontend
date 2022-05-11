@@ -26,8 +26,8 @@
                     "name": "Items Show",
                     "pathName": "pages/itemsShow/itemsShow",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "launchMode": "default",
+                    "scene": null
                 },
                 {
                     "name": "",

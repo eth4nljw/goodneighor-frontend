@@ -1,5 +1,4 @@
 <!--pages/bidsItem/bidsItem.wxml-->
-
 <view class="item-banner">
     <view class="item-card">
         <text>{{item.id}}</text>

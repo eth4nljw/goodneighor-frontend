@@ -11,11 +11,11 @@
 }
 
 .wechat-user-image{
-    margin-left: 30%;
+    /* margin-left: 30%; */
     width: 33%;
     height:200rpx;
     border-radius: 20%;
-    margin-top: 15rpx;
+    /* margin-top: 15rpx; */
 
 }
 
@@ -64,8 +64,19 @@
     white-space: nowrap;
 }
 
-li{
+/* li{
     display: inline-block;
     white-space: nowrap;
+    text-align: center;
+} */
+
+.flex-container{
+    display: flex;
+}
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+.text-center{
     text-align: center;
 }

@@ -11,12 +11,12 @@
         <text class="card5">{{item.description}}</text>
     </view>
     <view class="card3">
-      <view class="make-like-button2">可兑换</view>
+      <view class="make-like-button2" style="text-align: center;">可兑换</view>
       <block wx:if="{{item.status == 'available'}}">
-        <view class="make-like-button3" bindtap="goToBidsItem" data-id="{{item.id}}">See bids</view>
+        <view class="make-like-button3" style="text-align: center;" bindtap="goToBidsItem" data-id="{{item.id}}">交换请求</view>
       </block>
       <block wx:else>
-        <text class="make-like-button3">已兑换</text>
+        <text class="make-like-button3" style="text-align: center;">已兑换</text>
       </block>
     </view>
 

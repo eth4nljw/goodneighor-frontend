@@ -2,10 +2,10 @@
 <view class="item-banner">
     <view class="item-card">
     <view class="detail">
-        <text style="font-size: larger;padding-bottom: 15rpx;">{{item.name}}</text>
-        <text>{{item.description}}</text>
+        <text style="font-size: larger;padding-bottom: 20rpx;">{{item.name}}</text>
+        <text style="justify-content: space-between;">{{item.description}}</text>
     </view>
-        <image class="card-image" src="{{item.photo}}" lazy-load="true" mode="widthFix"></image>
+        <image class="card-image" mode="aspectFill" src="{{item.photo}}" lazy-load="true" mode="widthFix"></image>
     </view>
 </view>
 
@@ -18,11 +18,12 @@
         <block wx:if="{{bid.bid.status == 'pending'}}">
             <block wx:if="{{bid.bid.owner_item_id == item.id}}">
                 <view class="detail">
-                <text>ID:{{bid.taker_item.id}}</text>
-                <text>商品名称:{{bid.taker_item.name}}</text>
-                <text>Bids ID:{{bid.bid.id}}</text>
+                <text>ID: {{bid.taker_item.id}}</text>
+                <text>商品名称: {{bid.taker_item.name}}</text>
+                <text>Bids ID: {{bid.bid.id}}</text>
+                <text>用户ID: {{bid.taker_item.user_id}}</text>
             </view>
-                <image class="card-image" src="{{bid.taker_item.photo}}" lazy-load="true" mode="widthFix"></image>
+                <image class="card-image" mode="aspectFill" src="{{bid.taker_item.photo}}" lazy-load="true" mode="widthFix"></image>
                 <button class="submit" bindtap="selectBids" data-id="{{bid.bid.id}}">选择</button>
             </block>
         </block>

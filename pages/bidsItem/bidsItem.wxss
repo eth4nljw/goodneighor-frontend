@@ -10,7 +10,7 @@
     margin: 25rpx;
 }
 
-.detail{
+.detail{ 
     float: right;
     display: flex;
     flex-direction: column;

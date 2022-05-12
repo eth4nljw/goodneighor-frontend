@@ -11,7 +11,7 @@
         </view>
     </view>
  
-    <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
+    <view class="container-want" wx:if="{{item.status == 'available'}}">
         <view class="text-center helper h3">你的下面这些宝贝可交换上面的物品</view>
         <view class="text-center helper h3">请选择你的物品</view>
         <form bindsubmit="bidSubmit" catchsubmit="bindSubmit">
@@ -35,7 +35,7 @@
             </view>
         </form>
     </view>
-    <view class="bids-avaliable" wx:if="{{item.status == 'unavailable'}}">
+    <view class="bids-available" wx:if="{{item.status == 'unavailable'}}">
         <view class="error">此宝贝暂不可用</view>
     </view>
 </view>

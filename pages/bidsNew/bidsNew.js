@@ -66,9 +66,14 @@ Page({
           console.log("my items:", page.data.myItems.length)
         }
       })
-      },
-
-
+    },
+    
+    goToItemsNew: function(e) {
+        const itemId = e.currentTarget.dataset.id
+        wx.switchTab({
+          url: `/pages/itemsNew/itemsNew`
+        })
+   },
 
 
     getItem: function (options) {

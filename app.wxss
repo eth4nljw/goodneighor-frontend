@@ -213,6 +213,7 @@
 }
 .error{
     color: tomato;
+    margin-left: 80rpx;
 }
 /* sizes */
 .h1{

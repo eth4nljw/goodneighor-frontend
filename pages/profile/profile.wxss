@@ -29,6 +29,7 @@
     width: 390rpx;
     border-radius: 30rpx;
     height: 260rpx;
+    justify-content: space-between;
 }
 
 .make-like-button2{
@@ -42,8 +43,6 @@
 
 .card3{
     display: flex;
-
-    margin-top: 100rpx;
 }
 
 .make-like-button3{
@@ -58,8 +57,13 @@
 
 .card4{
     margin-top: 2rpx;
+    font-size: 40rpx;
 }
 
+.card5{
+    color: darkgray;
+    margin-top: 5rpx;
+}
 
 .page-section{
     display: inline;
@@ -67,4 +71,9 @@
 
 .banner{
     width: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
 }

@@ -6,8 +6,10 @@
 
   </view>
   <view class="card2">
-    <text class="card4">{{item.name}}</text>
-    <text class="card4">{{item.description}}</text>
+    <view class="column">
+        <text class="card4">{{item.name}}</text>
+        <text class="card5">{{item.description}}</text>
+    </view>
     <view class="card3">
       <view class="make-like-button2">可兑换</view>
       <block wx:if="{{item.status == 'available'}}">
@@ -20,7 +22,7 @@
 
   </view>
 </view>
-
+<view style="height: 120rpx;"></view>
 <!-- <view class="page-section">
   <view class="page-section-title">推荐展示样式</view>
   <view class="weui-cells weui-cells_after-title">

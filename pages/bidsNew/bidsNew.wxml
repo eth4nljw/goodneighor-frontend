@@ -39,6 +39,7 @@
         <view class="error">此宝贝暂不可用</view>
     </view>
     <view wx:if="{{myItems.length < 1}}">
-        <text class="error"> 你还没有宝贝! 请先创建一个新宝贝</text>
+        <text class="error"> 你需要先添加一个宝贝才可以和邻居交换哦！</text>
+        <button class="change-background-color" bindtap="goToItemsNew">添加宝贝</button>
     </view>
 </view>

@@ -1,7 +1,11 @@
 <view>
     <image class="banner" mode="widthFix" src="/image/profile.png"></image>
 </view>
-<view class="head">您要交换的物品:</view>
+<view wx:if="{{items.length < 1}}">
+  <view style="text-align: center;">你暂时还没有要交换的物品哦！</view>
+  <button class="change-background-color" bindtap="goToItemsNew">添加宝贝</button>
+</view>
+
 <view class="main card" wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
     <view class="card">
         <image class="item-image-menu" src="{{item.photo}}" lazy-load="true"></image>
@@ -13,13 +17,13 @@
             <text class="card5">{{item.description}}</text>
         </view>
         <view class="card3">
-            <view class="make-like-button2" style="text-align: center;">可兑换</view>
             <block wx:if="{{item.status == 'available'}}">
-                <view class="make-like-button3" style="text-align: center;" bindtap="goToBidsItem" data-id="{{item.id}}">交换请求</view>
+                <view class="make-like-button2" style="text-align: center;">可兑换</view>
             </block>
             <block wx:else>
                 <text class="make-like-button3" style="text-align: center;">已兑换</text>
             </block>
+            <view class="make-like-button3" style="text-align: center;" bindtap="goToBidsItem" data-id="{{item.id}}">查看请求</view>
         </view>
     </view>
 </view>

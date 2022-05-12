@@ -27,6 +27,13 @@ Page({
         })
    },
     
+   goToItemsNew: function(e) {
+        const itemId = e.currentTarget.dataset.id
+        wx.switchTab({
+        url: `/pages/itemsNew/itemsNew`
+        })
+    },
+
     /**
      * Page initial data
      */

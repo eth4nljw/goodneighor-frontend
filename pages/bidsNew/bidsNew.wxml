@@ -10,10 +10,13 @@
             <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange bottom">免费</view>
         </view>
     </view>
- 
-    <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
-        <view class="text-center helper h3">你的下面这些宝贝可交换上面的物品</view>
-        <view class="text-center helper h3">请选择你的物品</view>
+    
+    <block class="container-want" wx:if="{{item.status == 'available'}}">
+
+        <!-- <view>此宝贝可以发起请求</view> -->
+        <view class="text-center">你的下面这些宝贝可交换上面的物品</view>
+        <view class="text-center">请选择你的物品</view>
+
         <form bindsubmit="bidSubmit" catchsubmit="bindSubmit">
             <radio-group name="myItem">
                 <view class="main" wx:for="{{myItems}}" wx:key="id" wx:for-item="myItem" data-id="{{myItem.id}}">
@@ -34,8 +37,8 @@
                 <button class="submit" type="primary" formType="submit">提交要求</button>
             </view>
         </form>
-    </view>
-    <view class="bids-avaliable" wx:if="{{item.status == 'unavailable'}}">
-        <view class="error">此宝贝暂不可用</view>
-    </view>
+    </block>
+    <block class="item-already-taken" wx:else>
+        <view>该宝贝已经被人拿走啦！</view>
+    </block>
 </view>

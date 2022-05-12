@@ -5,6 +5,7 @@
     height: 650rpx;
     width: 750rpx;
     border-radius: 0% 0% 18% 18%;
+    object-fit: fit;
 }
 
 /* item details area */
@@ -39,4 +40,8 @@
 }
 .item-details-color{
     color: darkgray;
+}
+
+.item-yourself{
+    font-size: 50rpx;
 }

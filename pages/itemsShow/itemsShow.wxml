@@ -9,7 +9,7 @@
         </view>
         <view class="item-details-row">
             <view wx:if="{{item.is_freebie}}" class="indicator item-freebie">免费</view>
-            <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange">可兑换</view>
+            <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange" style="width: fit-content;">可兑换</view>
         </view>
         <view wx:if="{{!item.is_freebie}}" class="item-details-row">
             <view class="indicator item-request">要求: </view>

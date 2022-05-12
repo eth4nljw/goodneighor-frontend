@@ -37,6 +37,7 @@
     height: 650rpx;
     width: 750rpx;
     border-radius: 0% 0% 18% 18%;
+    object-fit: fit;
 }
 
 /* item details area */

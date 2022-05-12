@@ -37,8 +37,7 @@ align-items: center;
     background-color: greenyellow;
     display: block;
     text-align: center;
-    left: 10%;
-    margin-top: -5%;
+    margin-top: 40rpx;
 }
 
 /* Flex utility classes */

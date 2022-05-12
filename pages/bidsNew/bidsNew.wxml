@@ -18,7 +18,7 @@
             <radio-group name="myItem">
                 <view class="main" wx:for="{{myItems}}" wx:key="id" wx:for-item="myItem" data-id="{{myItem.id}}">
                     <label>
-                        <view class="flex-container my-item-container">
+                        <view class="flex-container my-item-container" style="padding: 20rpx;">
                             <radio value="{{myItem.id}}" checked />
                             <image src="{{myItem.photo}}" class="horizontal-card-image" mode="aspectFill"></image>
                             <view class="flex-container-column">

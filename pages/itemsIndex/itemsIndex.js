@@ -13,6 +13,9 @@ Page({
       header: app.globalData.header,
       success(res) {
       const items = res.data;
+      items.forEach(item => {
+          item.name = item.name.slice(0,6);
+      })
       page.setData({
         items: items,
       });

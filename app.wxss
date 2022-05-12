@@ -108,6 +108,8 @@
   .card-item-name{
       font-size: 30rpx;
       font-weight: bold;
+      text-align: center;
+      padding: 20rpx;
   }
   .card-item-type {
       font-size: 80%;

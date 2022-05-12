@@ -37,7 +37,7 @@
     background-color:lightskyblue;
     border-radius: 20rpx;
     height: 50rpx;
-    width: 100rpx;
+    width: fit-content;
     margin-top: 20rpx;
 }
 
@@ -50,7 +50,7 @@
     background-color: gainsboro;
     border-radius: 20rpx;
     height: 50rpx;
-    width: 130rpx;
+    width: fit-content;
     margin-top: 20rpx;
     margin-left: 15rpx;
 }

@@ -20,8 +20,7 @@
 
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "#000000",
-    "backgroundColor": "#00000",
+    "borderStyle": "white",
     "list": [{
       "pagePath": "pages/itemsIndex/itemsIndex",
       "iconPath": "/image/indexb.png"

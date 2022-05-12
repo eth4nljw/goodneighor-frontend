@@ -59,10 +59,10 @@ Page({
         page.getItems()
         setTimeout(() => {
           console.log(page.data.user.id);
-    
       }, 2000) // 等待后跳转页面
         
     },
+
 
     /**
      * 生命周期函数--监听页面初次渲染完成

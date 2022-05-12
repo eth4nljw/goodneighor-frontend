@@ -60,6 +60,10 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        app.globalData.userInfo = res.userInfo;
+        wx.reLaunch({
+          url: `/pages/itemsIndex/itemsIndex`
+        })
       }
     })
   },

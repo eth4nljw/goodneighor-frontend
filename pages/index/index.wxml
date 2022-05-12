@@ -1,25 +1,25 @@
 <view class="container">
-    <view>
+    <view style="margin-top:150rpx;">
         <image mode="widthFix" src="/image/logo.png"></image>
     </view>
 
-    <view class="userinfo">
+    <view class="userinfo" style="margin-bottom: 200rpx;">
         <block wx:if="{{!hasUserInfo}}">
-            <text class="slogan h1">快来一起抢邻居的物品吧！</text>
-            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-            <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <text class="slogan h1">快来和邻居交换物品吧</text>
+            <button class="button-main" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" style="background-color:tomato; color:white;">加入好邻居</button>
+            <button class="button-main" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="background-color:tomato; color:white;">加入好邻居</button>
         </block>
         <block wx:else>
             <view class="userinfo">
                 <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
                 <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
                 <text>{{userInfo.nickName}}</text>
-                <view class="address">
+                <!-- <view class="address">
                     <text>爱情公寓</text>
-                </view>
+                </view> -->
             </view>
             <view class="footer-box margin-bottom">
-                <button class="button-main" bindtap="goToItemsIndex">加入好邻居</button>
+                <button class="button-main" bindtap="goToItemsIndex" style="background-color:tomato; color:white;">开始使用</button>
                 <!-- <view class="agreement">
                     <checkbox class="checkbox"value="cb" checked="true"/>
                     <text>我同意此协议 </text>

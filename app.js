@@ -40,7 +40,8 @@ App({
     baseUrl: "https://haolinju-api.wogengapp.cn/api/v1",
     header: null,
     user: null,
-    items: null
+    items: null,
+    userInfo: null,
   }
 })
 

@@ -72,3 +72,7 @@
 .item-details-color{
     color: darkgray;
 }
+
+.item-yourself{
+    font-size: 50rpx;
+}

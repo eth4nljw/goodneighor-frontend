@@ -9,7 +9,7 @@
     background-color: rgba(239,239,239,0.46);
     border-radius: 5%;
     align-items: center;
-    margin-bottom: 25rpx;
+    margin-bottom: 50rpx;
 }
 .container-want{
     height: 180rpx;
@@ -19,6 +19,7 @@
 
 /* Note area */
 .note-section{
+    margin-top: 25rpx;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -33,6 +34,7 @@ align-items: center;
 
 /* Buttons */
 .submit{
+    background-color: greenyellow;
     display: block;
     text-align: center;
     left: 10%;
@@ -50,11 +52,13 @@ align-items: center;
 }
 
 .margin-h-large{
-    margin: 0 75rpx; 
+    margin-top:75rpx;
+    margin-bottom: 75rpx;
 }
 
 .margin-h-small{
-    margin: 0 25rpx;
+    margin-top:25rpx;
+    margin-bottom: 25rpx;
 }
 
 .flex-container-row{

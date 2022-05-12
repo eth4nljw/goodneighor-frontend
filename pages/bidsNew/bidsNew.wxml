@@ -18,7 +18,7 @@
             <radio-group name="myItem">
                 <view class="main" wx:for="{{myItems}}" wx:key="id" wx:for-item="myItem" data-id="{{myItem.id}}">
                     <label>
-                        <view class="flex-container margin-h-small my-item-container">
+                        <view class="flex-container my-item-container">
                             <radio value="{{myItem.id}}" checked />
                             <image src="{{myItem.photo}}" class="horizontal-card-image" mode="aspectFill"></image>
                             <view class="flex-container-column">
@@ -31,7 +31,7 @@
             </radio-group>
             <view class="note-section">
                 <textarea class="form-input-field note-input" name="note" placeholder="留下你的留言吧！" />
-                <button class="submit" type="primary" formType="submit">提交要求</button>
+                <button class="submit" formType="submit">提交要求</button>
             </view>
         </form>
     </view>

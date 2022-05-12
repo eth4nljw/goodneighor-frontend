@@ -26,8 +26,12 @@
 }
 
 .change-background-color{
-    background-color: white;
+    background-color: greenyellow;
     margin: 80rpx;
+    width: 50rpx;
+    padding: 25rpx;
+    font-size: 45rpx;
+
 }
 
 .item-name{

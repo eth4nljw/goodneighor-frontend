@@ -17,10 +17,10 @@
         </view>
         <view class="item-details-color">{{item.description}}</view>
         <block wx:if="{{item.user_id == user.id}}">
-            <view class="item-yourself">这个物品是你自己的，你不可以交换哈哈！</view>
+            <!-- <view class="item-yourself"><text>这个物品是你自己的，你不可以交换哈哈！</text></view> -->
         </block>
         <block wx:else>
-            <button class="change-background-color" data-id="{{item.id}}" bindtap="goToBidsNew"><icon type="success" size="70"></icon></button>
+            <button class="change-background-color" data-id="{{item.id}}" bindtap="goToBidsNew">我想要</button>
         </block>
     </view>
 </view>

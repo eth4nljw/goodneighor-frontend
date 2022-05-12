@@ -1,82 +1,70 @@
-.head{
-    display: block;
-    text-align: left;
-    font-size: 30rpx;
-    text-decoration: underline;
-    margin-top: 30rpx;
-}
-
-.trading-item{
-    display: inline;
-}
-
-.wechat-user-image{
-    /* margin-left: 30%; */
+/* Cards */
+.horizontal-card-image{
     width: 33%;
     height:200rpx;
     border-radius: 20%;
-    /* margin-top: 15rpx; */
-
 }
 
-.item-name{
-    text-align: center;
-    margin-top: 20rpx;
-    margin-bottom: 30rpx;
+.my-item-container{
+    background-color: rgba(239,239,239,0.46);
+    border-radius: 5%;
+    align-items: center;
+    margin-bottom: 25rpx;
 }
-
-.detail{
-    float: right;
-}
-
-
 .container-want{
-    background-color: whitesmoke;
     height: 180rpx;
     margin-bottom: 20rpx;
     margin-top: 120rpx;
 }
 
-.container-msg{
-    margin-top: 10rpx;
+/* Note area */
+.note-section{
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-.weui-input{
+.note-input{
     width: 500rpx;
-    height: 300rpx;
-    border: 1px solid wheat;
-    border-radius: 20%;
+    padding:25rpx;
+    border-radius: 10%;
     justify-content: center;
-    margin-left: 14%;
-    background-color: rgb(223, 221, 221);
+    background-color: #F2F2F2;
 }
 
+/* Buttons */
 .submit{
-    margin-top: -85rpx;
+    display: block;
     text-align: center;
+    left: 10%;
+    margin-top: -5%;
 }
 
-.btn-area{
-    margin-left:175rpx;
-}
-
-.detail-line{
-    display: inline;
-    white-space: nowrap;
-}
-
-/* li{
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
-} */
-
+/* Flex utility classes */
 .flex-container{
     display: flex;
 }
 .flex-container-column{
+    margin-left: 25rpx;
     display: flex;
     flex-direction: column;
 }
-.text-center{
-    text-align: center;
+
+.margin-h-large{
+    margin: 0 75rpx; 
 }
+
+.margin-h-small{
+    margin: 0 25rpx;
+}
+
+.flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+
+

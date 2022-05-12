@@ -25,7 +25,7 @@ Page({
      * Page initial data
      */
     data: {
-
+        user: null
     },
 
     goToBidsNew: function(e) {
@@ -41,6 +41,9 @@ Page({
     onLoad: function (options) {
         const page = this
         page.getItem(options)
+        page.setData({
+            user: app.globalData.user,
+        });
     },
 
     /**

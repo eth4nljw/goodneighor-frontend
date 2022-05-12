@@ -12,7 +12,7 @@
                 <view>
                     <text class="text-bigger">{{bid.owner_item.name}}</text>
                 </view>
-                <text class="discription-color">{{bid.owner_item.description}}</text>
+                <text class="description-color">{{bid.owner_item.description}}</text>
             </view>
             <view>
                 <view class="changeflex-direction">

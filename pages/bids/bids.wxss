@@ -81,7 +81,7 @@
     justify-content: space-between;
 }
 
-.discription-color{
+.description-color{
     color: darkgray;
 }
 

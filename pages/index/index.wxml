@@ -8,23 +8,21 @@
             <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
         </block>
         <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-            <text>{{userInfo.nickName}}</text>
-        <view class="address">
-            <text>爱情公寓</text>
-            <button class="button-main" bindtap="goToItemsIndex">加入好邻居</button>
-        <view class="footer-box margin-bottom">
-            <view class="agreement">
-                <checkbox class="checkbox"value="cb" checked="true"/>
-                <text>我同意此协议 </text>
+            <view class="userinfo">
+                <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+                <text>{{userInfo.nickName}}</text>
+                <view class="address">
+                    <text>爱情公寓</text>
+                </view>
             </view>
-    </view>
-        </view>
+            <view class="footer-box margin-bottom">
+                <button class="button-main" bindtap="goToItemsIndex">加入好邻居</button>
+                <!-- <view class="agreement">
+                    <checkbox class="checkbox"value="cb" checked="true"/>
+                    <text>我同意此协议 </text>
+                </view> -->
+            </view>
         </block>
-
-    </view>
- 
-    <view>
-        </view>
-    
+    </view>   
 </view>

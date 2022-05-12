@@ -1,42 +1,11 @@
-/* indicators */
-.indicator{
-    border-radius: 10%;
-    padding: 5rpx 10rpx 5rpx 10rpx;
-    margin-right: 25rpx;
-}
-.item-category{
-    background-color: #FEE8E8;
-    width: 100rpx;
-    border-radius: 15%;
-    text-align: center;
-}
 
-.item-freebie{
-    background-color: #6CDB38;
-    width: 100rpx;
-    border-radius: 15%;
-    text-align: center;
-}
-
-.item-exchange{
-    background-color: #B5C7E3;
-    width: 100rpx;
-    border-radius: 15%;
-    text-align: center;
-}
-
-.item-request{
-    background-color: #F5AA40;
-    width: 100rpx;
-    border-radius: 15%;
-    text-align: center;
-}
 
 /* item image area */
 .item-image-large{
     height: 650rpx;
     width: 750rpx;
     border-radius: 0% 0% 18% 18%;
+    object-fit: fit;
 }
 
 /* item details area */
@@ -71,4 +40,8 @@
 }
 .item-details-color{
     color: darkgray;
+}
+
+.item-yourself{
+    font-size: 50rpx;
 }

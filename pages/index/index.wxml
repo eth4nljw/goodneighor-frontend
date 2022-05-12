@@ -2,8 +2,10 @@
     <view>
         <image mode="widthFix" src="/image/logo.png"></image>
     </view>
+
     <view class="userinfo">
         <block wx:if="{{!hasUserInfo}}">
+            <text class="slogan h1">快来一起抢邻居的物品吧！</text>
             <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
             <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
         </block>

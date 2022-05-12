@@ -1,10 +1,10 @@
 // pages/bidsItem/bidsItem.js
 let app = getApp()
 Page({
-  getBids: function () {
+  getBids: function (id) {
     const page = this
     wx.request({
-      url: `${app.globalData.baseUrl}/users/${app.globalData.user.id}/bids`,
+      url: `${app.globalData.baseUrl}/items/${id}/bids`,
       method: 'GET',
       header: app.globalData.header,
       success(res) {
@@ -82,9 +82,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this
+    const page = this;
+    console.log(options)
     page.getItem(options)
-    page.getBids()
+    page.getBids(options.id)
     // page.getItems()
 
     setTimeout(() => {

@@ -1,20 +1,17 @@
 <!--pages/bidsItem/bidsItem.wxml-->
-<view class="item-banner">
+<view class="item-banner" style="display: flex; vertical-align: middle;">
     <view class="item-card">
-    <view class="detail">
-        <text style="font-size: larger;padding-bottom: 20rpx;">{{item.name}}</text>
-        <text style="justify-content: space-between;">{{item.description}}</text>
-    </view>
         <image class="card-image" mode="aspectFill" src="{{item.photo}}" lazy-load="true" mode="widthFix"></image>
     </view>
+    <view class="bids-title" style="text-align: center; margin-top: 50rpx;">
+        <text style="font-size: larger;">Bids for {{item.name}}</text>
 </view>
 
-<view class="bids-title" style="text-align: center;">
-    <text style="font-size: larger;">Bids for {{item.name}}</text>
 </view>
+
 
 <view class="bids-card" wx:for="{{bids}}" wx:for-item="bid">
-    <block wx:if="{{bid.owner_item.status == 'available'}}">
+    <!-- <block wx:if="{{bid.owner_item.status == 'available'}}">
         <block wx:if="{{bid.bid.status == 'pending'}}">
             <block wx:if="{{bid.bid.owner_item_id == item.id}}">
                 <view class="detail">
@@ -27,5 +24,35 @@
                 <button class="submit" bindtap="selectBids" data-id="{{bid.bid.id}}">选择</button>
             </block>
         </block>
-    </block>
+    </block> -->
+    <view>
+      <image scaleToFill class="item-image-menu" src="{{bid.taker_item.photo}}" lazy-load="true"></image>
+    </view>
+    <view class="horizontal-card">
+            <view class="addmargin">
+                <view>
+                    <text class="text-bigger">{{bid.taker_item.name}}</text>
+                </view>
+                <text class="description-color">{{bid.taker_item.description}}</text>
+            </view>
+            <view>
+                <view class="changeflex-direction">
+                    <block wx:if="{{bid.taker_item.is_freebie}}">
+                        <!-- <text class="make-like-button2">免费</text> -->
+                    </block>
+                    <block wx:else>
+                        <text class="make-like-button2">可兑换</text>
+                    </block>
+                    <block wx:if="{{bid.item.status=='accepted'}}">
+                        <text>完成</text>
+                    </block>
+                    <block wx:if="{{bid.item.status=='declined'}}">
+                        <text>已拒绝</text>
+                    </block>
+                    <block else>
+                        <text class="make-like-button3">待确定</text>
+                    </block>
+                </view>
+            </view>
+        </view>
 </view>

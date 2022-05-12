@@ -54,3 +54,12 @@
   .usermotto {
     margin-top: 200px;
   }
+
+.slogan{
+    margin: 60rpx 25rpx;
+    font-family: cursive;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

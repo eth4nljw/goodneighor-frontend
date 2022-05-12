@@ -33,7 +33,7 @@
                 
                 <view class="form-row">
                     <view>无偿</view> 
-                    <switch bindchange="freebieBindPickerChange" name="is_freebie" checked="true"/>
+                    <!-- <switch bindchange="freebieBindPickerChange" name="is_freebie" checked="true"/> -->
                     <picker bindchange="conditionBindPickerChange" value="{{condition_index}}" range="{{itemCondition}}" name="condition">
                         <view class="picker">宝贝质量:</view>
                         <view class="picker-selection">{{itemCondition[condition_index]}}</view>

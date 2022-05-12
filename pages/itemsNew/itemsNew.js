@@ -118,7 +118,8 @@ Page({
         chosen: '',
         itemCondition: ["选择", "全新", "二手", "损坏"],
         itemCategory: ["选择", "运动", "电器", "家具", "时尚"],
-        is_freebie_state: true,
+        is_freebie_state: false,
+        // is_freebie_state: true,
         imgSrc: '/image/photo.png',
         category_index: 0,
         condition_index: 0

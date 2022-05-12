@@ -19,20 +19,24 @@
   },
 
   "tabBar": {
-    "color": "#000000",
     "borderStyle": "white",
+    "selectedColor": "#4da9ff",
     "list": [{
       "pagePath": "pages/itemsIndex/itemsIndex",
-      "iconPath": "/image/indexb.png"
+      "iconPath": "/image/indexb.png",
+      "selectedIconPath": "/image/index.png"
       },{
       "pagePath": "pages/profile/profile",
-      "iconPath": "/image/mineb.png"
+      "iconPath": "/image/mineb.png",
+      "selectedIconPath": "/image/mine.png"
     },{
         "pagePath": "pages/itemsNew/itemsNew",
-        "iconPath": "/image/addb.png"
+        "iconPath": "/image/addb.png",
+        "selectedIconPath": "/image/add.png"
     },{
         "pagePath": "pages/bids/bids",
-        "iconPath": "/image/bidsb.png"
+        "iconPath": "/image/bidsb.png",
+        "selectedIconPath": "/image/bids.png"
     }]
   },
   

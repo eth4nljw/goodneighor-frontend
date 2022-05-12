@@ -1,39 +1,26 @@
-<view><image class="banner" mode="widthFix" src="/image/profile.png"></image></view>
+<view>
+    <image class="banner" mode="widthFix" src="/image/profile.png"></image>
+</view>
 <view class="head">您要交换的物品:</view>
 <view class="main card" wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
-  <view class="card">
-    <image class="item-image-menu" src="{{item.photo}}" lazy-load="true"></image>
+    <view class="card">
+        <image class="item-image-menu" src="{{item.photo}}" lazy-load="true"></image>
 
-  </view>
-  <view class="card2">
-    <view class="column">
-        <text class="card4">{{item.name}}</text>
-        <text class="card5">{{item.description}}</text>
     </view>
-    <view class="card3">
-      <view class="make-like-button2" style="text-align: center;">可兑换</view>
-      <block wx:if="{{item.status == 'available'}}">
-        <view class="make-like-button3" style="text-align: center;" bindtap="goToBidsItem" data-id="{{item.id}}">交换请求</view>
-      </block>
-      <block wx:else>
-        <text class="make-like-button3" style="text-align: center;">已兑换</text>
-      </block>
+    <view class="card2">
+        <view class="column">
+            <text class="card4">{{item.name}}</text>
+            <text class="card5">{{item.description}}</text>
+        </view>
+        <view class="card3">
+            <view class="make-like-button2" style="text-align: center;">可兑换</view>
+            <block wx:if="{{item.status == 'available'}}">
+                <view class="make-like-button3" style="text-align: center;" bindtap="goToBidsItem" data-id="{{item.id}}">交换请求</view>
+            </block>
+            <block wx:else>
+                <text class="make-like-button3" style="text-align: center;">已兑换</text>
+            </block>
+        </view>
     </view>
-
-  </view>
 </view>
 <view style="height: 120rpx;"></view>
-<!-- <view class="page-section">
-  <view class="page-section-title">推荐展示样式</view>
-  <view class="weui-cells weui-cells_after-title">
-    <radio-group bindchange="radioChange">
-      <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-
-        <view class="weui-cell__hd">
-          <radio value="{{item.value}}" checked="true" />
-        </view>
-        <view class="weui-cell__bd">{{item.name}}</view>
-      </label>
-    </radio-group>
-  </view>
-</view> -->

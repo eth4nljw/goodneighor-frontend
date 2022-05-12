@@ -37,7 +37,7 @@ App({
   globalData: {
     userInfo: null,
     baseUrl: "http://localhost:3000/api/v1",
-    //baseUrl: "https://haolinju-api.wogengapp.cn/api/v1",
+    // baseUrl: "https://haolinju-api.wogengapp.cn/api/v1",
     header: null,
     user: null,
     items: null

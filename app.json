@@ -24,17 +24,13 @@
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
     "list": [{
-      "pagePath": "pages/itemsIndex/itemsIndex",
-      "text": "主页"
+      "pagePath": "pages/itemsIndex/itemsIndex"
       },{
-      "pagePath": "pages/profile/profile",
-      "text": "测试"
+      "pagePath": "pages/profile/profile"
     },{
-        "pagePath": "pages/itemsNew/itemsNew",
-        "text": "bids"
+        "pagePath": "pages/itemsNew/itemsNew"
     },{
-        "pagePath": "pages/bids/bids",
-        "text": "个人"
+        "pagePath": "pages/bids/bids"
     }]
   },
   

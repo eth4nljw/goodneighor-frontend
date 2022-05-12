@@ -68,7 +68,7 @@
     text-align: center;
 }
 
-.make-like-button3{
+.make-like-button4{
     padding: 10rpx;
     background-color: yellow;
     border-radius: 20rpx;
@@ -95,7 +95,7 @@
 
 .make-like-button4{
     padding: 10rpx;
-    background-color: greenyellow;
+    background-color: orange; 
     border-radius: 20rpx;
     height: 50rpx;
     width: 130rpx;
@@ -122,6 +122,7 @@
 
 .description-color{
     color: darkgray;
+    font-size: 25rpx;
 }
 
 .text-bigger{

@@ -118,7 +118,8 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        const page = this
+        console.log(page.data.item)
     },
 
     /**

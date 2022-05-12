@@ -58,7 +58,7 @@
     </view>
  
         <!-- <text class="detail">{{item.description}}</text> -->
-    <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
+    <block class="container-want" wx:if="{{item.status == 'available'}}">
 
         <!-- <view>此宝贝可以发起请求</view> -->
         <view class="text-center">你的下面这些宝贝可交换上面的物品</view>
@@ -90,11 +90,11 @@
                 <button class="submit" type="primary" formType="submit">提交要求</button>
             </view>
         </form>
-    </view>
+    </block>
+    <block class="item-already-taken" wx:else>
+        <view>该宝贝已经被人拿走啦！</view>
+    </block>
 
-    <view class="bids-avaliable" wx:if="{{item.status == 'unavailable'}}">
-        <view>此宝贝暂不可用</view>
-    </view>
 
 
 </view>

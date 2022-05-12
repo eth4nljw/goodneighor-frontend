@@ -6,7 +6,7 @@
                 <text class="helper h3">我想要这个:</text>
             </view>
             <text class="h1">{{item.name}}</text>
-            <view wx:if="{{item.is_freebie}}" class="indicator item-freebie bottom">可兑换</view>
+            <view wx:if="{{item.is_freebie}}" class="indicator item-freebie bottom" style="width: fit-content;">可兑换</view>
             <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange bottom">免费</view>
         </view>
     </view>

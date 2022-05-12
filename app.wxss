@@ -72,6 +72,7 @@
     /* Product Cards */
     .grid { 
       margin: 20rpx;
+      padding-bottom: 200rpx;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250rpx, 2fr));
       grid-gap: 20rpx;

@@ -1,100 +1,41 @@
-<!-- <view class="">
-    <view class="selected-item-section">
-        <text>You are trading this item:</text>
-        <view class="horizontal-card">
-            <image class="horizontal-card-image" src="{{item.photo}}"></image>
-            <view class="horizontal-card-content">
-                <view class="horizontal-card-content-row">
-                    <image class="information-box"></image>
-                    <text>You're bidding for:</text>
-                </view>
-                <view class="horizontal-card-content-row">
-                    <text>{{item.name}}</text>
-                </view>
-                <view class="horizontal-card-content-row">
-                    <view wx:if="{{item.is_freebie}}">freebie</view>
-                    <view wx:if="{{!item.is_freebie}}">Exchangable</view>
-                </view>
-            </view>
-        </view>
-    </view>
-</view> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <view>
-    <view class="flex-container">
-        <image src="{{item.photo}}" class="horizontal-card-image" />
-        <!-- <view class="trading-item">
-            <text>{{item.name}}</text>
-            <view class="third-container">
-            <ul class="detail-line">
-                <li><view class="make-like-button3">{{item.category}}</view></li>
-                <li><view class="make-like-button1">{{item.value}}积分</view></li>
-                <li><view class="make-like-button2">可兑换</view></li>
-            </ul>
+    <view class="flex-container margin-h-large">
+        <image src="{{item.photo}}" class="horizontal-card-image" mode="aspectFill" />
+        <view class="flex-container-column ">
+            <view class="flex-container-row">
+                <text class="helper h3">我想要这个:</text>
             </view>
-        </view> -->
-        <view class="flex-container-column">
-            <text>我想要这个</text>
-            <text>{{item.name}}</text>
-            <view class="make-like-button2">可兑换</view>
+            <text class="h1">{{item.name}}</text>
+            <view wx:if="{{item.is_freebie}}" class="indicator item-freebie bottom">可兑换</view>
+            <view wx:if="{{!item.is_freebie}}" class="indicator item-exchange bottom">免费</view>
         </view>
     </view>
  
-        <!-- <text class="detail">{{item.description}}</text> -->
     <view class="container-want" wx:if="{{item.status == 'avaliable'}}">
-
-        <!-- <view>此宝贝可以发起请求</view> -->
-        <view class="text-center">你的下面这些宝贝可交换上面的物品</view>
-        <view class="text-center">请选择你的物品</view>
-
-
-
+        <view class="text-center helper h3">你的下面这些宝贝可交换上面的物品</view>
+        <view class="text-center helper h3">请选择你的物品</view>
         <form bindsubmit="bidSubmit" catchsubmit="bindSubmit">
             <radio-group name="myItem">
                 <view class="main" wx:for="{{myItems}}" wx:key="id" wx:for-item="myItem" data-id="{{myItem.id}}">
                     <label>
-                        <radio value="{{myItem.id}}" checked />{{myItem.name}}
+                        <view class="flex-container margin-h-small my-item-container">
+                            <radio value="{{myItem.id}}" checked />
+                            <image src="{{myItem.photo}}" class="horizontal-card-image" mode="aspectFill"></image>
+                            <view class="flex-container-column">
+                                <text class="h2">{{myItem.name}}</text>
+                                <text class="h4 cut-text">{{myItem.description}}</text>
+                            </view>                            
+                        </view>
                     </label>
                 </view>
             </radio-group>
-
-            <view class="page-section page-section-gap">
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd" style="margin: 80rpx 0">
-                            <input class="weui-input" name="note" placeholder="留下你的留言吧！" />
-                        </view>
-                    </view>
-                </view>
-            </view>
-
-
-            <view class="btn-area">
+            <view class="note-section">
+                <textarea class="form-input-field note-input" name="note" placeholder="留下你的留言吧！" />
                 <button class="submit" type="primary" formType="submit">提交要求</button>
             </view>
         </form>
     </view>
-
     <view class="bids-avaliable" wx:if="{{item.status == 'unavailable'}}">
-        <view>此宝贝暂不可用</view>
+        <view class="error">此宝贝暂不可用</view>
     </view>
-
-
 </view>

@@ -35,8 +35,8 @@
         "selectedIconPath": "/image/add.png"
     },{
         "pagePath": "pages/bids/bids",
-        "iconPath": "/image/bidsb.png",
-        "selectedIconPath": "/image/bids.png"
+        "iconPath": "/image/new.png",
+        "selectedIconPath": "/image/newg.png"
     }]
   },
   

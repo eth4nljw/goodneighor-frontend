@@ -1,7 +1,7 @@
 <!--pages/bidsItem/bidsItem.wxml-->
 <view class="item-banner" style="display: flex; vertical-align: middle;">
     <view class="item-card">
-        <image class="card-image" mode="aspectFill" src="{{item.photo}}" lazy-load="true" mode="widthFix"></image>
+        <image class="card-image" style="width: 100rpx;" src="{{item.photo}}" lazy-load="true"  style="height: 200rpx;" ></image>
     </view>
     <view class="bids-title" style="text-align: center; margin-top: 50rpx;">
         <text style="font-size: larger;">{{item.name}}收到的请求</text>

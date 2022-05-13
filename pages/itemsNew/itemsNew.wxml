@@ -1,5 +1,6 @@
 <view class="card-container">
-    <view class="page-banner"><text>添加我的宝贝</text></view>
+<image class="title" mode="widthFix" src="/image/itemnew.png"></image>
+    <!-- <view class="page-banner"><text>添加我的宝贝</text></view> -->
     <view class="item-card-add">
         <view class="button-bg" bindtap="bindBack">
             <text class="button-back"></text>  

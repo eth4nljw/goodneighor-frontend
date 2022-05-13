@@ -8,7 +8,7 @@
             <view class="item-name">{{item.name}}</view>
         </view>
         <view wx:if="{{!item.is_freebie}}" class="item-details-row">
-            <view class="indicator item-request">要求: </view>
+            <view class="indicator item-request">要求 </view>
             <view class="item-request-detail">{{item.request}}</view>
         </view>
         <view class="item-details-color">{{item.description}}</view>

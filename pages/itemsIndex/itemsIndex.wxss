@@ -8,7 +8,7 @@ page{
     background-color: #ffc2b4;
     position: sticky;
     top: 0;
-    margin-top: -14rpx;
+    margin-top: -15rpx;
 }
 
 /* Category Bar */

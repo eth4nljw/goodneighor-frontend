@@ -1,5 +1,5 @@
+<image class="home-banner" mode="widthFix" src="/image/title.png"></image>
 <view class="menu-container">
-    <image class="home-banner" mode="widthFix" src="/image/title.png"></image>
     <view class="searchbar">
         <input class="search" name="userName" placeholder="请搜索你想要的宝贝" placeholder-class="placeholder" bindinput="searchName"/>
     </view>

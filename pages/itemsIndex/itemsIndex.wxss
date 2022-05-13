@@ -1,7 +1,14 @@
 /* pages/itemsIndex/itemsIndex.wxss */
 /* Menu */
+page{
+    position: relative;
+}
+
 .menu-container{
     background-color: #ffc2b4;
+    position: sticky;
+    top: 0;
+    margin-top: -14rpx;
 }
 
 /* Category Bar */
@@ -10,6 +17,8 @@
     background-color: #ffc2b4;
     overflow: hidden;
     display: block;
+    position: sticky;
+    top: 0;
   }
 
 .navbar-item {

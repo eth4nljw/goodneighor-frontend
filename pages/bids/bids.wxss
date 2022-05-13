@@ -40,6 +40,28 @@
     text-align: center;
 }
 
+.make-like-button4{
+    padding: 10rpx;
+    background-color: rgb(55, 241, 111);
+    border-radius: 20rpx;
+    height: 50rpx;
+    width: 130rpx;
+    margin-top: 20rpx;
+    margin-left: 35rpx;
+    text-align: center;
+}
+
+.make-like-button5{
+    padding: 10rpx;
+    background-color: rgb(233, 49, 49);
+    border-radius: 20rpx;
+    height: 50rpx;
+    width: 130rpx;
+    margin-top: 20rpx;
+    margin-left: 35rpx;
+    text-align: center;
+}
+
 .godown{
     margin-top: 20rpx;
 }

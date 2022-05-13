@@ -64,9 +64,9 @@ Page({
     },
     goToItemsSport: function(e) {
         const page = this
-        this.setData({itemCategory: "体育"})
+        this.setData({itemCategory: "运动"})
         wx.request({
-            url: `${app.globalData.baseUrl}/items?cate=体育`,
+            url: `${app.globalData.baseUrl}/items?cate=运动`,
             method: 'GET',
             header: app.globalData.header,
             success(res) {

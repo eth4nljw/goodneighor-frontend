@@ -33,6 +33,7 @@ Page({
             items: items,
             user: app.globalData.user
           });
+          
         }
         
       })

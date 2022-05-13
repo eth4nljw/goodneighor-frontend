@@ -4,8 +4,9 @@ Page({
 
         let note = e.detail.value.note;
         let myItemId = e.detail.value.myItem;
+        console.log("deeets", e.detail.value.phone_number)
         let bid = {
-
+        phone_number: e.detail.value.phone_number,
         owner_item_id: this.data.itemId,
         taker_item_id: myItemId,
         "status": "pending",
@@ -118,6 +119,9 @@ Page({
         console.log(itemId)
         page.getItem(options)
         page.myItems(options)
+        page.setData({
+            user: app.globalData.user,
+        });
     },
 
     /**

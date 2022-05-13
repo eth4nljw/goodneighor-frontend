@@ -1,4 +1,4 @@
-<view>
+<view class="page-margins">
     <view class="flex-container margin-h-large">
         <image src="{{item.photo}}" class="horizontal-card-image" mode="aspectFill" />
         <view class="flex-container-column ">
@@ -30,6 +30,9 @@
                 </view>
             </radio-group>
             <view class="note-section">
+                <view wx:if="{{!user.phone_number}}" class="">
+                    <input class="form-input-field" name="phone_number" placeholder="请输入手机号码"/>
+                </view>
                 <textarea class="form-input-field note-input" name="note" placeholder="留下你的留言吧！" />
                 <button class="submit" formType="submit">提交要求</button>
             </view>

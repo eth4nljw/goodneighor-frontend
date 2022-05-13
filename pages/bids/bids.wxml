@@ -22,10 +22,10 @@
                     <block wx:else>
                         <text class="make-like-button2">可兑换</text>
                     </block>
-                    <block wx:if="{{bid.item.status=='accepted'}}">
+                    <block wx:if="{{bid.bid.status=='accepted'}}">
                         <text>完成</text>
                     </block>
-                    <block wx:if="{{bid.item.status=='declined'}}">
+                    <block wx:if="{{bid.bid.status=='declined'}}">
                         <text>已拒绝</text>
                     </block>
                     <block else>

@@ -42,31 +42,50 @@ Page({
 
   selectBids: function (options) {
     const page = this
+    const bids = page.data.bids
     let selectedItemId = options.currentTarget.dataset.id
     let itemId = page.data.item.id
     console.log(selectedItemId)
-    wx.request({
-        url: `${app.globalData.baseUrl}/bids/${selectedItemId}/accept`,
-        method: 'POST',
-        header: app.globalData.header,
-        success(res) {
-          // const item = res.data
-          console.log(res.data)
-          console.log(page.data.bids)
+    for (let i = 0; i < bids.length; i++) {
+      console.log(bids[i].bid.id)
+      if (selectedItemId != bids[i].bid.id) {
 
-          wx.request({
-            url: `${app.globalData.baseUrl}/items/${itemId}/receive`,
-            method: 'POST',
-            header: app.globalData.header,
-            success(res) {
-              console.log(itemId)
+        wx.request({
+          url: `${app.globalData.baseUrl}/bids/${bids[i].bid.id}/decline`,
+          method: 'POST',
+          header: app.globalData.header,
+          success(res) {
+            
+            console.log(bids[i].bid.id)
+            console.log("declined")
+            bids[i].taker_item.status = "declined"
+            console.log(res.data)
+          }
+        })
+      }
+    }
+    wx.request({
+      url: `${app.globalData.baseUrl}/bids/${selectedItemId}/accept`,
+      method: 'POST',
+      header: app.globalData.header,
+      success(res) {
+        // const item = res.data
+        console.log(res.data)
+        console.log(page.data.bids)
+
+        wx.request({
+          url: `${app.globalData.baseUrl}/items/${itemId}/receive`,
+          method: 'POST',
+          header: app.globalData.header,
+          success(res) {
+            console.log(itemId)
             wx.reLaunch({
               url: `/pages/profile/profile`
             })
           }
-          })
-        }
-      
+        })
+      }
+
     })
 
   },

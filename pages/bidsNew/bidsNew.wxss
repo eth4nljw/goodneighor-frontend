@@ -80,3 +80,13 @@ align-items: center;
 }
 
 
+.form-input-field{
+    padding: 15rpx 25rpx;
+    background-color: #F2F2F2;
+    border-radius: 20rpx;
+    margin-bottom: 25rpx;
+}
+
+.page-margins{
+    margin: 0 25rpx;
+}

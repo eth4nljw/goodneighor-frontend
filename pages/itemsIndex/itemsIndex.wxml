@@ -8,7 +8,7 @@
             <!-- <view bindtap="goToItemNew" class="navbar-item">新建</view> -->
             <view bindtap="getItems" class="navbar-item {{itemCategory==='全部'? 'navbar-item-selected':''}}" data-category='全部'><text>全部</text></view>
             <view bindtap="goToItemsStudy" class="navbar-item {{itemCategory==='学习'? 'navbar-item-selected':''}}" data-category='学习'><text>学习</text></view>
-            <view bindtap="goToItemsSport" class="navbar-item {{itemCategory==='体育'? 'navbar-item-selected':''}}" data-category='运动'>体育</view>
+            <view bindtap="goToItemsSport" class="navbar-item {{itemCategory==='运动'? 'navbar-item-selected':''}}" data-category='运动'>运动</view>
             <view bindtap="goToItemsEA" class="navbar-item {{itemCategory==='电器'? 'navbar-item-selected':''}}" data-category='电器'>电器</view>
             <view bindtap="goToItemsHW" class="navbar-item {{itemCategory==='家具'? 'navbar-item-selected':''}}" data-category='家具'>家具</view>
             <view bindtap="goToItemsF" class="navbar-item {{itemCategory==='时尚'? 'navbar-item-selected':''}}" data-category='时尚'>时尚</view>
@@ -16,7 +16,7 @@
 </view>
 
     <view class="grid">
-        <view wx:for="{{items}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}" bindtap="goToItemShow">
+        <view wx:for="{{items}}" wx:key="id" wx:for-item="item" wx:if="{{item.status==='available'}}" data-id="{{item.id}}" bindtap="goToItemShow">
             <view class="card">
                 <image class="card-image" src="{{item.photo}}" lazy-load="true" mode="aspectFill"></image>
                 <text class="card-item-name" style="text-align:center;"> {{item.name}}</text>
